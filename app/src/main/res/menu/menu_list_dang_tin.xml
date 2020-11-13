@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group >
+        <item
+            android:id="@+id/addDangTin"
+            android:icon="@drawable/button_plus_green"
+            android:title="Thêm"
+            app:showAsAction="always" />
+    </group>
+</menu>
