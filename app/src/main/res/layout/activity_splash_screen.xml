@@ -18,7 +18,7 @@
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/loGhim"
+        android:src="@drawable/lo_ghim"
         android:layout_marginLeft="140dp"
         android:layout_marginTop="300dp"/>
 
@@ -29,7 +29,6 @@
         android:layout_marginLeft="140dp"
         android:layout_marginTop="480dp"
         android:background="@drawable/grad_bg"
-        android:onClick="btn_dangNhap"
         android:text="Đăng Nhập"
         android:textSize="20dp"
         android:textStyle="bold" />

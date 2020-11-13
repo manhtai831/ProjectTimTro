@@ -161,7 +161,7 @@
             android:id="@+id/img_login_FB"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/iconFB"
+            android:src="@drawable/icon_fb"
             android:layout_marginTop="16dp"
             android:layout_marginLeft="60dp"/>
         <ImageView
@@ -169,14 +169,14 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginTop="16dp"
-            android:src="@drawable/iconTwitter"
+            android:src="@drawable/icon_twitter"
             android:layout_marginLeft="40dp"/>
         <ImageView
             android:id="@+id/img_login_Google"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginTop="16dp"
-            android:src="@drawable/iconGoogle"
+            android:src="@drawable/icon_google"
             android:layout_marginLeft="40dp"/>
     </LinearLayout>
 
