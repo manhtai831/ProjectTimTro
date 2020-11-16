@@ -9,7 +9,7 @@
     android:paddingRight="8dp"
     android:paddingBottom="8dp"
     android:background="@drawable/grad_bg"
-    tools:context=".ui.login.LoginActivity">
+    tools:context=".LoginActivity">
 
         <ImageView
             android:layout_marginTop="30dp"
@@ -51,19 +51,29 @@
                     android:textAllCaps="true"
                     android:textColor="@color/white"
                     android:textSize="20dp" />
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/ed_login_Username"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
                     android:layout_marginTop="5dp"
-                    android:fontFamily="sans-serif-light"
-                    android:background="@drawable/et_bg"
-                    android:hint="Username"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:textColor="@color/white"
-                    android:textSize="20dp" />
+
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_login_Username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="@drawable/et_bg"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="Username"
+                        android:paddingTop="8dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="8dp"
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
 
             </LinearLayout>
             <LinearLayout
@@ -84,16 +94,26 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+
                     android:fontFamily="sans-serif-light"
-                    android:background="@drawable/et_bg"
-                    android:paddingLeft="15dp"
-                    android:hint="Password"
-                    android:paddingRight="15dp"
-                    android:textColor="@color/white"
-                    android:textSize="20dp"
-                    android:id="@+id/ed_login_Pass"/>
+
+>
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_login_Pass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="8dp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/et_bg"
+                        android:textSize="20dp"
+                        android:hint="Password" />
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
             <CheckBox
