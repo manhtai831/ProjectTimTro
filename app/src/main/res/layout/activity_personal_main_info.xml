@@ -2,19 +2,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#17e6e6">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
         android:layout_marginTop="50dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginLeft="40dp">
 
         <ImageView
             android:id="@+id/img_personal_main_info_avatar"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginLeft="40dp"
             android:background="@drawable/user_3" />
 
         <LinearLayout
@@ -49,7 +51,8 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_marginLeft="10dp"
-                    android:background="@drawable/delete" />
+                    android:background="@drawable/delete"
+                    android:backgroundTint="#ffffff"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -59,13 +62,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="15dp"
-        android:orientation="vertical">
+        android:layout_marginTop="25dp"
+        android:orientation="vertical"
+        android:layout_marginRight="30dp">
 
         <TextView
             android:id="@+id/tv_personal_main_info_name_2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="Name"
             android:textColor="#000000"
             android:textStyle="bold" />
@@ -80,9 +84,10 @@
 
     <RadioGroup
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginRight="30dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="25dp"
         android:orientation="horizontal">
 
         <RadioButton
@@ -106,9 +111,10 @@
     <TextView
         android:id="@+id/tv_personal_main_info_dateOfBirth"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginRight="30dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="25dp"
         android:text="ngay tháng năm sinh"
         android:textColor="#000000"
         android:textStyle="bold" />
@@ -116,9 +122,10 @@
     <TextView
         android:id="@+id/tv_personal_main_info_phoneNumber"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginRight="30dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="25dp"
         android:text="số điện thoại"
         android:textColor="#000000"
         android:textStyle="bold" />
@@ -126,9 +133,10 @@
     <TextView
         android:id="@+id/tv_personal_main_info_email"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginRight="30dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="25dp"
         android:text="email"
         android:textColor="#000000"
         android:textStyle="bold" />
@@ -136,9 +144,10 @@
     <TextView
         android:id="@+id/tv_personal_main_info_address"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginRight="30dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="25dp"
         android:text="địa chỉ"
         android:textColor="#000000"
         android:textStyle="bold" />
@@ -148,10 +157,10 @@
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/th"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/tv_boder"
         android:text="Cập Nhật Thông Tin"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textStyle="bold" />
 
 </LinearLayout>
