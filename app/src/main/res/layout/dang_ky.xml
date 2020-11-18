@@ -11,7 +11,7 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="145dp"
+        android:layout_height="110dp"
         android:layout_marginTop="8dp"
         android:src="@drawable/logo_matbang"
         android:layout_gravity="center"/>
@@ -111,6 +111,8 @@
                 android:hint="Nhập mật khẩu ..."
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
                 android:background="@drawable/et_bg"
                 android:textSize="20dp"/>
         </com.google.android.material.textfield.TextInputLayout>
