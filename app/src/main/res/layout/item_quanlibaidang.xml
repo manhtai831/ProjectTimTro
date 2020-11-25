@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="4dp">
+    android:padding="8dp">
     <androidx.cardview.widget.CardView
         app:cardCornerRadius="10dp"
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
                 android:id="@+id/imageButton"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/icon_menu_vertical_48"
                 android:backgroundTint="@null"
                 app:layout_constraintEnd_toEndOf="parent"

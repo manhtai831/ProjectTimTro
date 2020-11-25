@@ -55,6 +55,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="380dp"
             android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
             app:hintEnabled="false">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ed_SignUp_NhapPassword"
@@ -79,6 +80,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="380dp"
             android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
             app:hintEnabled="false">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ed_SignUp_NhapLaiPassword"
