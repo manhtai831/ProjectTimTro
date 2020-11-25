@@ -106,7 +106,7 @@
     <EditText
         android:id="@+id/edt_personal_main_info_dateOfBirth"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="40dp"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="25dp"
@@ -117,7 +117,7 @@
     <EditText
         android:id="@+id/edt_personal_main_info_phoneNumber"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="40dp"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="25dp"
@@ -128,7 +128,7 @@
     <EditText
         android:id="@+id/tv_personal_main_info_email"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="40dp"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="25dp"
@@ -141,7 +141,7 @@
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/tv_boder"
         android:text="Cập Nhật Thông Tin"
         android:textColor="#000000"

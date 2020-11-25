@@ -8,19 +8,19 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:text="Điều Kiện Lọc"
         android:textSize="30dp"
-        android:textStyle="bold"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"/>
+        android:textStyle="bold" />
 
     <LinearLayout
-        android:layout_marginTop="100dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginLeft="20dp"
-        android:layout_marginBottom="7dp">
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="7dp"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
@@ -36,10 +36,10 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="7dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="7dp"
         android:orientation="horizontal">
 
         <TextView
@@ -52,14 +52,15 @@
             android:id="@+id/spinner_danhMuc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="4" />
+            android:layout_weight="4"
+            android:background="@drawable/tv_boder"/>
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="7dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="7dp"
         android:orientation="vertical">
 
         <TextView
@@ -125,7 +126,13 @@
                     android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
-
-
     </LinearLayout>
+
+    <Button
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tv_boder"
+        android:text="Tìm Kiếm" />
 </LinearLayout>
