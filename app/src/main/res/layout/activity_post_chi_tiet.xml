@@ -173,6 +173,7 @@
                     android:textSize="30dp"
                     android:textColor="@color/black"/>
                 <TextView
+                    android:id="@+id/tv_postchitiet_moTa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="Giờ giấc thoải mái , có full option , an ninh tốt"
