@@ -126,7 +126,7 @@ public class LoginActivity extends AppCompatActivity {
         cbLoginLuuMK = (CheckBox) findViewById(R.id.cb_login_LuuMK);
         btnLoginLogin = (Button) findViewById(R.id.btn_login_Login);
         btnLoginSignUp = (Button) findViewById(R.id.btn_login_SignUp);
-        btnQuenMK = (Button) findViewById(R.id.btnQuenMK);
+        //btnQuenMK = (Button) findViewById(R.id.btnQuenMK);
 
     }
 
