@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@drawable/grad_bg"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="8dp">
 
     <TextView
         android:layout_width="wrap_content"
@@ -14,50 +15,27 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"/>
 
-    <LinearLayout
-        android:layout_marginTop="100dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="7dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Khu Vực :"
-            android:textStyle="bold" />
 
         <Spinner
+            android:layout_marginTop="100dp"
+            android:background="@drawable/bg_spinner"
             android:id="@+id/spinner_khuVuc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="4" />
-    </LinearLayout>
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
 
-    <LinearLayout
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="7dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Danh Mục Cho Thuê :"
-            android:textStyle="bold" />
+
 
         <Spinner
+            android:background="@drawable/bg_spinner"
+            android:layout_marginTop="16dp"
             android:id="@+id/spinner_danhMuc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="4" />
-    </LinearLayout>
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
 
     <LinearLayout
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="7dp"
+        android:layout_marginTop="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -69,29 +47,35 @@
             android:textStyle="bold" />
 
         <LinearLayout
+            android:weightSum="10"
+            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="0"
                 android:textStyle="bold" />
 
             <SeekBar
+                android:layout_weight="7"
                 android:id="@+id/seekBar3"
-                android:layout_width="200dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_weight="2"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="500"
                 android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
+            android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -103,23 +87,28 @@
                 android:textStyle="bold" />
 
             <LinearLayout
+                android:layout_marginTop="8dp"
+                android:weightSum="10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="0"
                     android:textStyle="bold" />
 
                 <SeekBar
+                    android:layout_weight="7"
                     android:id="@+id/seekBar4"
-                    android:layout_width="200dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="10.000.000"
                     android:textStyle="bold" />
@@ -128,4 +117,13 @@
 
 
     </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ff0"
+        android:text="lọc"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"/>
 </LinearLayout>
