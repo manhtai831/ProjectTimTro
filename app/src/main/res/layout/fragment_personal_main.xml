@@ -6,15 +6,29 @@
     android:layout_gravity="center"
     android:background="@drawable/grad_bg"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:padding="8dp">
+    android:padding="8dp"
+    tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tv_personal_main_notification"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:hint="Thông Báo" />
+        android:background="@null">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_personal_main_notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Người dùng"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,28 +45,18 @@
             android:backgroundTint="#ffffff" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/tv_personal_main_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginRight="60dp"
-        android:text="Name"
-        android:textColor="#000000"
-        android:textStyle="bold" />
-
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="16dp"
         android:orientation="horizontal">
 
         <Button
-            android:layout_marginRight="16dp"
             android:id="@+id/btn_personal_main_tienich"
             android:layout_width="180dp"
             android:layout_height="60dp"
+            android:layout_marginRight="16dp"
             android:background="@drawable/tv_boder"
             android:gravity="center"
             android:text="Tiện Ích"
@@ -190,6 +194,4 @@
             android:textSize="25dp"
             android:textStyle="bold" />
     </LinearLayout>
-
-
 </LinearLayout>
