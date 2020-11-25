@@ -9,35 +9,32 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:text="Điều Kiện Lọc"
         android:textSize="30dp"
-        android:textStyle="bold"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"/>
+        android:textStyle="bold" />
 
 
-
-        <Spinner
-            android:layout_marginTop="100dp"
-            android:background="@drawable/bg_spinner"
-            android:id="@+id/spinner_khuVuc"
-            android:layout_width="match_parent"
-            android:layout_height="40dp" />
-
+    <Spinner
+        android:id="@+id/spinner_khuVuc"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/bg_spinner" />
 
 
-
-        <Spinner
-            android:background="@drawable/bg_spinner"
-            android:layout_marginTop="16dp"
-            android:id="@+id/spinner_danhMuc"
-            android:layout_width="match_parent"
-            android:layout_height="50dp" />
+    <Spinner
+        android:id="@+id/spinner_danhMuc"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_spinner" />
 
     <LinearLayout
-        android:layout_marginTop="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:orientation="vertical">
 
         <TextView
@@ -47,37 +44,37 @@
             android:textStyle="bold" />
 
         <LinearLayout
-            android:weightSum="10"
-            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
 
             <TextView
-                android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="0"
                 android:textStyle="bold" />
 
             <SeekBar
-                android:layout_weight="7"
                 android:id="@+id/seekBar3"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_weight="7" />
 
             <TextView
-                android:layout_weight="2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="2"
                 android:text="500"
                 android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:orientation="vertical">
 
             <TextView
@@ -87,29 +84,29 @@
                 android:textStyle="bold" />
 
             <LinearLayout
-                android:layout_marginTop="8dp"
-                android:weightSum="10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:weightSum="10">
 
                 <TextView
-                    android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:text="0"
                     android:textStyle="bold" />
 
                 <SeekBar
-                    android:layout_weight="7"
                     android:id="@+id/seekBar4"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7" />
 
                 <TextView
-                    android:layout_weight="2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="2"
                     android:text="10.000.000"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -121,9 +118,9 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#ff0"
-        android:text="lọc"
         android:layout_gravity="center"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        android:layout_marginTop="16dp"/>
+        android:background="#ff0"
+        android:text="lọc" />
 </LinearLayout>
