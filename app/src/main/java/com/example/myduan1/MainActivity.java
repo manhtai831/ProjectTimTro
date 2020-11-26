@@ -8,7 +8,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.example.myduan1.Fragment.AddPostFragment;
 import com.example.myduan1.Fragment.HomeFragment;
+import com.example.myduan1.Fragment.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -38,8 +40,10 @@ public class MainActivity extends AppCompatActivity {
                         fragment = HomeFragment.newInstance();
                         break;
                     case R.id.navigation_post:
+                        fragment = AddPostFragment.newInstance();
                         break;
                     case R.id.navigation_profile:
+                        fragment = ProfileFragment.newInstance();
                         break;
                     default:
                         fragment = HomeFragment.newInstance();

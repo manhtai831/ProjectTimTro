@@ -9,10 +9,6 @@
     android:padding="8dp"
     tools:context=".MainActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@null">
 
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
@@ -25,9 +21,10 @@
                 android:gravity="center"
                 android:text="Người dùng"
                 android:textColor="@color/black"
+                android:textStyle="bold"
                 android:textSize="24sp" />
         </androidx.appcompat.widget.Toolbar>
-    </com.google.android.material.appbar.AppBarLayout>
+
 
 
     <LinearLayout
@@ -46,7 +43,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
@@ -55,37 +52,39 @@
         <Button
             android:id="@+id/btn_personal_main_tienich"
             android:layout_width="180dp"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:layout_marginRight="16dp"
             android:background="@drawable/tv_boder"
             android:gravity="center"
             android:text="Tiện Ích"
             android:textColor="#000000"
-            android:textSize="25dp"
-            android:textStyle="bold" />
+            android:textSize="25dp" />
 
         <Button
             android:id="@+id/btn_personal_main_thongtin"
             android:layout_width="180dp"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/tv_boder"
             android:gravity="center"
             android:text="Thông Tin"
             android:textColor="#000000"
-            android:textSize="25dp"
-            android:textStyle="bold" />
+            android:textSize="25dp" />
     </LinearLayout>
 
     <LinearLayout
+        android:weightSum="10"
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_weight="5"
+            android:gravity="center"
+
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
             android:orientation="vertical">
 
             <ImageView
@@ -95,18 +94,19 @@
                 android:background="@drawable/contract" />
 
             <TextView
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:layout_marginTop="8dp"
                 android:text="Bài Đăng"
                 android:textColor="#000000"
                 android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp"
             android:orientation="vertical">
 
             <ImageView
@@ -114,10 +114,11 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/exclamation_mark"
-                android:backgroundTint="#ffffff" />
+               />
 
             <TextView
-                android:layout_width="100dp"
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Thông Tin"
@@ -127,15 +128,18 @@
     </LinearLayout>
 
     <LinearLayout
+        android:weightSum="10"
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
             android:orientation="vertical">
 
             <ImageView
@@ -143,10 +147,11 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/user_2"
-                android:backgroundTint="#ffffff" />
+               />
 
             <TextView
-                android:layout_width="100dp"
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Chỉnh Sửa Thông Tin"
@@ -155,9 +160,10 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_weight="5"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp"
+            android:gravity="center"
             android:orientation="vertical">
 
             <ImageView
@@ -165,12 +171,12 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/business_and_finance"
-                android:backgroundTint="#ffffff" />
+               />
 
             <TextView
-                android:layout_width="100dp"
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:text="Cập Nhật Mật Khẩu"
                 android:textColor="#000000"
                 android:textStyle="bold" />
@@ -178,6 +184,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -186,12 +193,10 @@
         <Button
             android:id="@+id/btn_personal_main_dangxuat"
             android:layout_width="200dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="100dp"
+            android:layout_height="wrap_content"
+
             android:background="@drawable/tv_boder"
             android:text="Đăng Xuất"
-            android:textColor="#000000"
-            android:textSize="25dp"
-            android:textStyle="bold" />
+            android:textSize="25dp" />
     </LinearLayout>
 </LinearLayout>
