@@ -5,8 +5,9 @@
     android:layout_height="match_parent"
     android:background="@drawable/grad_bg">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@null"
@@ -15,41 +16,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.Toolbar
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:weightSum="10">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <androidx.appcompat.widget.SearchView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8.5"
+                android:background="@drawable/bg_spinner" />
+
+            <ImageView
+                android:id="@+id/imgV_main_filterloc"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:weightSum="10">
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:src="@drawable/iconfilter_loc" />
+        </LinearLayout>
 
-                <androidx.appcompat.widget.SearchView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="8.5"
-                    android:background="@drawable/et_bg2" />
-
-                <ImageView
-                    android:id="@+id/imgV_main_filterloc"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="8dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/iconfilter_loc" />
-            </LinearLayout>
-
-        </androidx.appcompat.widget.Toolbar>
-    </com.google.android.material.appbar.AppBarLayout>
+    </androidx.appcompat.widget.Toolbar>
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView_main_bangTin"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,16 +1,25 @@
 package com.example.myduan1.model;
 
 public class User {
-    private String name,userName, password, phoneNumber;
+    private String userName, name, gender, phoneNumber, password;
 
     public User() {
     }
 
-    public User(String name, String userName, String password, String phoneNumber) {
-        this.name = name;
+    public User(String userName, String name, String gender, String phoneNumber, String password) {
         this.userName = userName;
-        this.password = password;
+        this.name = name;
+        this.gender = gender;
         this.phoneNumber = phoneNumber;
+        this.password = password;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public String getName() {

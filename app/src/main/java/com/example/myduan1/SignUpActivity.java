@@ -37,20 +37,16 @@ public class SignUpActivity extends AppCompatActivity {
     private TextInputEditText edSignUpSoDienThoai;
     private TextInputEditText edSignUpHoTen;
     private RadioGroup radioGruoupSignUpGioiTinh;
-    private RadioButton rbnSignUpGTNam;
-    private RadioButton rbnSignUpGTNu;
     private Button btnSignUpDangKy;
     private Button btnSignUpHuy;
     private Toolbar toolBarDangKi;
-
-
-
-
+    private RadioButton rbnSignUpGTNam;
 
 
 
     private DatabaseReference databaseReference;
     final String NODE_USER = "user";
+    String gender = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,39 +59,32 @@ public class SignUpActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("");
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
+        setClickButton();
 
-        btnSignUpDangKy.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                SignUp(edSignUpNhapUserName.getText().toString(), new User(edSignUpHoTen.getText().toString(),
-                        edSignUpNhapUserName.getText().toString(),edSignUpNhapLaiPassword.getText().toString(),edSignUpSoDienThoai.getText().toString()));
-                Toast.makeText(SignUpActivity.this, "Đăng ký thành công", Toast.LENGTH_SHORT).show();
-            }
-        });
-        btnSignUpHuy.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+
     }
 
     private void SignUp(String s1, User u) {
-        final ProgressDialog progressDialog = new ProgressDialog(SignUpActivity.this);
-        progressDialog.setMessage("Xin chờ ...");
-        progressDialog.show();
-        databaseReference.child(NODE_USER).child(s1).push().setValue(u);
-        databaseReference.child(NODE_USER).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                progressDialog.dismiss();
-            }
+        if(validate()){
+            final ProgressDialog progressDialog = new ProgressDialog(SignUpActivity.this);
+            progressDialog.setMessage("Xin chờ ...");
+            progressDialog.show();
+            databaseReference.child(NODE_USER).child(s1).push().setValue(u);
+            databaseReference.child(NODE_USER).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    progressDialog.dismiss();
+                    Toast.makeText(SignUpActivity.this, "Đăng ký thành công", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                progressDialog.dismiss();
-            }
-        });
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                    progressDialog.dismiss();
+                }
+            });
+        }
+
     }
 
     private void anhXa() {
@@ -105,10 +94,64 @@ public class SignUpActivity extends AppCompatActivity {
         edSignUpSoDienThoai = findViewById(R.id.ed_SignUp_SoDienThoai);
         edSignUpHoTen = findViewById(R.id.ed_SignUp_HoTen);
         radioGruoupSignUpGioiTinh = findViewById(R.id.radioGruoup_SignUp_GioiTinh);
-        rbnSignUpGTNam = findViewById(R.id.rbn_SignUp_GTNam);
-        rbnSignUpGTNu = findViewById(R.id.rbn_SignUp_GTNu);
         btnSignUpDangKy = findViewById(R.id.btn_SignUp_DangKy);
         btnSignUpHuy = findViewById(R.id.btn_SignUp_Huy);
         toolBarDangKi = findViewById(R.id.tool_bar_dang_ki);
+        rbnSignUpGTNam = findViewById(R.id.rbn_SignUp_GTNam);
+    }
+
+    private boolean validate(){
+        String tenTaiKhoan  = edSignUpNhapUserName.getText().toString().trim();
+        String hoTen        = edSignUpHoTen.getText().toString().trim();
+        String soDienThoai  = edSignUpSoDienThoai.getText().toString().trim();
+        String matKhau1      = edSignUpNhapPassword.getText().toString().trim();
+        String matKhau2     = edSignUpNhapLaiPassword.getText().toString().trim();
+        if(tenTaiKhoan.length() <4 || tenTaiKhoan.length() > 20  ){
+            Toast.makeText(this, "Tên tài khoản phải dài hơn 4 kí tự", Toast.LENGTH_SHORT).show();
+            return false;
+        }else if(hoTen.length() == 0){
+            Toast.makeText(this, "Cần nhập họ và tên", Toast.LENGTH_SHORT).show();
+            return false;
+        }else if(gender.length() == 0){
+            Toast.makeText(this, "Cần chọn giới tính", Toast.LENGTH_SHORT).show();
+            return false;
+        }else if(!soDienThoai.matches("0[1-9]{9}")){
+            Toast.makeText(this, "Cần nhập số điện thoại đúng định dạng", Toast.LENGTH_SHORT).show();
+            return false;
+        }else if(!matKhau1.equals(matKhau2)){
+            Toast.makeText(this, "Mật khẩu không khớp", Toast.LENGTH_SHORT).show();
+            return false;
+        }else if(matKhau1.length() < 6){
+            Toast.makeText(this, "Mật khẩu dài hơn 6 kí tự", Toast.LENGTH_SHORT).show();
+            return false;
+        }else
+            return true;
+
+    }
+
+    private void setClickButton(){
+        radioGruoupSignUpGioiTinh.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                RadioButton radioButton = radioGroup.findViewById(i);
+                gender = radioButton.getText().toString();
+                Log.d(TAG, "onCheckedChanged: " + gender);
+            }
+        });
+
+        btnSignUpDangKy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SignUp(edSignUpNhapUserName.getText().toString(), new User(edSignUpNhapUserName.getText().toString(),
+                        edSignUpHoTen.getText().toString(),gender,edSignUpSoDienThoai.getText().toString(),edSignUpNhapLaiPassword.getText().toString()));
+
+            }
+        });
+        btnSignUpHuy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 }
