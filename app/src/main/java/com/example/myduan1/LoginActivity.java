@@ -1,6 +1,7 @@
 package com.example.myduan1;
 
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -16,6 +17,7 @@ import android.view.View;
 
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 
@@ -43,7 +45,14 @@ public class LoginActivity extends AppCompatActivity {
     private Button btnLoginSignUp;
     private Button btnQuenMK;
     private DatabaseReference databaseReference;
+    private ImageView imgLoginFB;
+    private ImageView imgLoginTwitter;
+    private ImageView imgLoginGoogle;
+
+
+
     ArrayList<User> users;
+
 
 
 
@@ -57,7 +66,12 @@ public class LoginActivity extends AppCompatActivity {
         anhXa();
         users = new ArrayList<>();
         databaseReference = FirebaseDatabase.getInstance().getReference();
-
+        SharedPreferences sharedPreferences = getSharedPreferences("user",MODE_PRIVATE);
+        if(sharedPreferences.getBoolean("checkbox",false)){
+            edLoginUsername.setText(sharedPreferences.getString("user",""));
+            edLoginPass.setText(sharedPreferences.getString("pass",""));
+            cbLoginLuuMK.setChecked(sharedPreferences.getBoolean("checkbox",false));
+        }
         btnLoginSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,18 +83,46 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 SignIn(edLoginUsername.getText().toString(),edLoginPass.getText().toString());
+                finish();
             }
         });
+
+        imgLoginFB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showNotification();
+            }
+        });
+        imgLoginGoogle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showNotification();
+            }
+        });
+        imgLoginTwitter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showNotification();
+            }
+        });
+
+
     }
 
     private void SignIn(String s1, final String s2){
+        SharedPreferences sharedPreferences = getSharedPreferences("user",MODE_PRIVATE);
+        Editor editor = sharedPreferences.edit();
         if(cbLoginLuuMK.isChecked()){
-            SharedPreferences sharedPreferences = getSharedPreferences("user",MODE_PRIVATE);
-            Editor editor = sharedPreferences.edit();
             editor.putString("user",s1);
             editor.putString("pass",s2);
-            editor.commit();
+            editor.putBoolean("checkbox",true);
+        }else{
+            editor.putString("user","");
+            editor.putString("pass","");
+            editor.putBoolean("checkbox",false);
         }
+        editor.commit();
+
 
         
         databaseReference.child("user").child(s1).addChildEventListener(new ChildEventListener() {
@@ -118,6 +160,15 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+
+    }
+
+    private void showNotification(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+        builder.setTitle("Thông báo");
+        builder.setMessage("Tính năng sắp ra mắt");
+        builder.setPositiveButton("OK",null);
+        builder.show();
     }
 
     private void anhXa() {
@@ -127,6 +178,9 @@ public class LoginActivity extends AppCompatActivity {
         btnLoginLogin = (Button) findViewById(R.id.btn_login_Login);
         btnLoginSignUp = (Button) findViewById(R.id.btn_login_SignUp);
         //btnQuenMK = (Button) findViewById(R.id.btnQuenMK);
+        imgLoginFB = findViewById(R.id.img_login_FB);
+        imgLoginTwitter = findViewById(R.id.img_login_Twitter);
+        imgLoginGoogle = findViewById(R.id.img_login_Google);
 
     }
 
