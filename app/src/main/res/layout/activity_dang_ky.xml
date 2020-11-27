@@ -220,7 +220,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/et_bg"
-
                 android:text="@string/sign_up_btn_confirm"
                 android:textSize="20sp" />
 

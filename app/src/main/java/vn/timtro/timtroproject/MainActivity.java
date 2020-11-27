@@ -2,7 +2,6 @@ package vn.timtro.timtroproject;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,7 +14,6 @@ import vn.timtro.timtroproject.fragment.HomeFragment;
 import vn.timtro.timtroproject.fragment.ProfileFragment;
 
 public class MainActivity extends AppCompatActivity {
-    private FrameLayout frameLayout;
     private BottomNavigationView navView;
 
 
@@ -48,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void anhXa() {
-        frameLayout = findViewById(R.id.frame_layout);
         navView = findViewById(R.id.nav_view);
     }
 

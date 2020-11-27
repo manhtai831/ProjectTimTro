@@ -12,7 +12,6 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,7 +21,7 @@ import vn.timtro.timtroproject.R;
 public class PostPersonalAdapter extends RecyclerView.Adapter<PostPersonalAdapter.PostPersonalHolder> {
 
     private static final String TAG = "AAA";
-    Context context;
+    final Context context;
 
     public PostPersonalAdapter(Context context) {
         this.context = context;
@@ -32,8 +31,7 @@ public class PostPersonalAdapter extends RecyclerView.Adapter<PostPersonalAdapte
     @Override
     public PostPersonalHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(context).inflate(R.layout.item_quanlibaidang, parent,false);
-        PostPersonalHolder holder = new PostPersonalHolder(v);
-        return holder;
+        return new PostPersonalHolder(v);
     }
 
     @Override
@@ -80,15 +78,15 @@ public class PostPersonalAdapter extends RecyclerView.Adapter<PostPersonalAdapte
 
 
 
-    protected class PostPersonalHolder extends RecyclerView.ViewHolder {
-        private ImageButton ibMenu;
-        private ImageView vpQuanLiBaiDang;
-        private TextView tvQuanLiBaiDangTitle;
-        private TextView tvItemQuanlibaidangDientich;
-        private ImageView imageView2;
-        private TextView tvItemQuanlibaidangGiatien;
-        private TextView tvItemQuanlibaidangNumberPhone;
-        private TextView tvQuanLiBaiDangAddress;
+    protected static class PostPersonalHolder extends RecyclerView.ViewHolder {
+        private final ImageButton ibMenu;
+        private final ImageView vpQuanLiBaiDang;
+        private final TextView tvQuanLiBaiDangTitle;
+        private final TextView tvItemQuanlibaidangDientich;
+        private final ImageView imageView2;
+        private final TextView tvItemQuanlibaidangGiatien;
+        private final TextView tvItemQuanlibaidangNumberPhone;
+        private final TextView tvQuanLiBaiDangAddress;
         public PostPersonalHolder(@NonNull View itemView) {
             super(itemView);
 

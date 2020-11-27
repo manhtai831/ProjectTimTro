@@ -1,7 +1,7 @@
 package vn.timtro.timtroproject.model;
 
 public class Post  {
-    private String image[];
+    private String[] image;
     private String tieuDe, gia, diaChi, soDienThoai, dienTich, moTa;
 
     public Post() {
