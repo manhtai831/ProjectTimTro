@@ -11,8 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PostPersonalActivity"
+        <activity android:name=".ChangePasswordActivity"
             android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".ChangeInfoActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".PersonalInfoActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".PostPersonalActivity"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".PostChiTiet" />
         <activity
             android:name=".SignUpActivity"

@@ -5,40 +5,36 @@
     android:layout_height="match_parent"
     android:background="@drawable/grad_bg">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout3"
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_update_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.Toolbar
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Cập nhật thông tin"
-                android:textColor="@color/black"
-                android:textSize="30sp"
-                android:textStyle="bold" />
-        </androidx.appcompat.widget.Toolbar>
-    </com.google.android.material.appbar.AppBarLayout>
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Cập nhật thông tin"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="32dp"
         android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout3">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_update_info">
 
         <TextView
             android:id="@+id/textView3"
@@ -52,7 +48,7 @@
 
         <EditText
 
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/edt_ho_ten"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -74,10 +70,10 @@
             android:text="Tên tài khoản"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+            app:layout_constraintTop_toBottomOf="@+id/edt_ho_ten" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/edt_ten_tai_khoan"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -99,10 +95,10 @@
             android:text="Giới tính"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+            app:layout_constraintTop_toBottomOf="@+id/edt_ten_tai_khoan" />
 
         <RadioGroup
-            android:id="@+id/radioGroup"
+            android:id="@+id/rg_gioi_tinh"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -112,16 +108,16 @@
             android:orientation="horizontal"
             android:padding="16dp"
             app:layout_constraintStart_toEndOf="@+id/textView5"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2">
+            app:layout_constraintTop_toBottomOf="@+id/edt_ten_tai_khoan">
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/rb_gt_nam"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Nam" />
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/rb_gt_nu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
@@ -136,10 +132,10 @@
             android:text="Số điện thoại"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+            app:layout_constraintTop_toBottomOf="@+id/rg_gioi_tinh" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName4"
+            android:id="@+id/edt_so_dien_thoai"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -162,11 +158,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4">
+            app:layout_constraintTop_toBottomOf="@+id/edt_so_dien_thoai">
 
             <Button
 
-                android:id="@+id/button"
+                android:id="@+id/btn_change_info_sua"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/et_bg"
@@ -174,7 +170,7 @@
                 android:text="Sửa" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btn_change_info_huy"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="48dp"

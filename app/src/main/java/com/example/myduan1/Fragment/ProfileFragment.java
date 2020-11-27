@@ -13,6 +13,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.myduan1.ChangeInfoActivity;
+import com.example.myduan1.ChangePasswordActivity;
+import com.example.myduan1.LoginActivity;
+import com.example.myduan1.PersonalInfoActivity;
 import com.example.myduan1.PostPersonalActivity;
 import com.example.myduan1.R;
 
@@ -64,6 +68,35 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getContext(), PostPersonalActivity.class));
+            }
+        });
+
+        imgPersonalMainInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), PersonalInfoActivity.class));
+            }
+        });
+        imgPersonalMainChangInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), ChangeInfoActivity.class));
+            }
+        });
+
+        imgPersonalMainUpdatePass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), ChangePasswordActivity.class));
+            }
+        });
+
+        btnPersonalMainDangxuat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), LoginActivity.class));
+                getActivity().finish();
+
             }
         });
     }

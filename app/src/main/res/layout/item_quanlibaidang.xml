@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="8dp">
@@ -13,33 +14,31 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/hong"
             android:padding="8dp">
 
             <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:id="@+id/ib_menu"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:scaleType="fitXY"
                 android:layout_marginTop="8dp"
-                android:background="@drawable/icon_menu_vertical_48"
-                android:backgroundTint="@null"
+                android:background="@null"
+                android:src="@drawable/icon_menu_vertical_48"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/img_item_quanlibaidang"
+                android:id="@+id/vp_quan_li_bai_dang"
                 android:layout_width="match_parent"
+                android:src="@drawable/no_image"
                 android:layout_height="150dp"
-
-                android:background="@drawable/no_image"
-                android:backgroundTint="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+                app:layout_constraintTop_toBottomOf="@+id/ib_menu" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/tv_quan_li_bai_dang_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -48,7 +47,7 @@
                 android:textSize="22dp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/img_item_quanlibaidang" />
+                app:layout_constraintTop_toBottomOf="@+id/vp_quan_li_bai_dang" />
 
             <ImageView
                 android:id="@+id/imageView"
@@ -57,7 +56,7 @@
                 android:layout_marginTop="8dp"
                 android:background="@drawable/ic_m2"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_quan_li_bai_dang_title" />
 
             <TextView
                 android:id="@+id/tv_item_quanlibaidang_dientich"
@@ -71,7 +70,7 @@
                 android:textSize="18dp"
 
                 app:layout_constraintStart_toEndOf="@+id/imageView"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_quan_li_bai_dang_title" />
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -132,6 +131,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
             <TextView
+                android:id="@+id/tv_quan_li_bai_dang_address"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -139,8 +139,8 @@
                 android:layout_marginTop="8dp"
                 android:text="Địa chỉ"
                 android:textColor="#000000"
-                android:textSize="18dp"
 
+                android:textSize="18dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView4"
                 app:layout_constraintTop_toBottomOf="@+id/imageView2" />

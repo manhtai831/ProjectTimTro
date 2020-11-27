@@ -6,12 +6,10 @@
     android:background="@drawable/grad_bg"
     android:orientation="vertical">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@null">
 
         <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_personal_info"
+            android:background="@null"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -19,11 +17,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Thông Tin Ngời Dùng"
+                android:text="Thông Tin Người Dùng"
                 android:textSize="30dp"
                 android:textStyle="bold" />
         </androidx.appcompat.widget.Toolbar>
-    </com.google.android.material.appbar.AppBarLayout>
 
 
     <androidx.cardview.widget.CardView

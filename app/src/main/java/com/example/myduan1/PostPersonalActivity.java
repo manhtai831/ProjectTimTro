@@ -6,9 +6,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.example.myduan1.Adapter.PostPersonalAdapter;
+
 public class PostPersonalActivity extends AppCompatActivity {
     private RecyclerView recyclerViewPostManager;
     private Toolbar toolbarPostPersonal;
+    PostPersonalAdapter postPersonalAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +24,8 @@ public class PostPersonalActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+        postPersonalAdapter = new PostPersonalAdapter(this);
+        recyclerViewPostManager.setAdapter(postPersonalAdapter);
 
     }
 }
