@@ -19,7 +19,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Người dùng"
+                android:text="@string/personal_title"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textSize="24sp" />
@@ -38,8 +38,7 @@
             android:id="@+id/img_personal_main_avatar"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:background="@drawable/user_3"
-            android:backgroundTint="#ffffff" />
+            android:background="@drawable/user_3" />
     </LinearLayout>
 
 
@@ -49,7 +48,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:baselineAligned="false">
 
         <LinearLayout
             android:layout_weight="5"
@@ -69,7 +69,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Bài Đăng"
+                android:text="@string/personal_post"
                 android:textColor="#000000"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -93,7 +93,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Thông Tin"
+                android:text="@string/personal_infomation"
                 android:textColor="#000000"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -105,7 +105,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:baselineAligned="false">
 
         <LinearLayout
             android:layout_weight="5"
@@ -126,7 +127,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Chỉnh Sửa Thông Tin"
+                android:text="@string/personal_update_info"
                 android:textColor="#000000"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -149,7 +150,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cập Nhật Mật Khẩu"
+                android:text="@string/personal_update_password"
                 android:textColor="#000000"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -166,9 +167,8 @@
             android:id="@+id/btn_personal_main_dangxuat"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-
             android:background="@drawable/tv_boder"
-            android:text="Đăng Xuất"
-            android:textSize="25dp" />
+            android:text="@string/personal_btn_sign_out"
+            android:textSize="25sp" />
     </LinearLayout>
 </LinearLayout>

@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item android:id="@+id/menu_post_manager_edit"
-        android:title="Sửa"/>
+        android:title="@string/update_info_btn_confirm"/>
     <item android:id="@+id/menu_post_manager_delete"
-        android:title="Xóa"/>
+        android:title="@string/delete"/>
 
 </menu>

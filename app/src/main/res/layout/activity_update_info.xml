@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Cập nhật thông tin"
+            android:text="@string/update_info_title"
             android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold" />
@@ -41,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="64dp"
-            android:text="Họ và tên"
+            android:text="@string/update_info_name"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -52,9 +52,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:background="@drawable/et_bg"
+            android:background="@drawable/et_bg2"
             android:ems="10"
-            android:hint="Họ và tên"
+            android:hint="@string/update_info_set_name"
             android:inputType="textPersonName"
             android:padding="16dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -67,7 +67,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Tên tài khoản"
+            android:text="@string/update_info_user_name"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edt_ho_ten" />
@@ -77,9 +77,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:background="@drawable/et_bg"
+            android:background="@drawable/et_bg2"
             android:ems="10"
-            android:hint="Tên tài khoản"
+            android:hint="@string/update_info_set_user_name"
             android:inputType="textPersonName"
             android:padding="16dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -92,7 +92,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="48dp"
-            android:text="Giới tính"
+            android:text="@string/update_info_gender"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edt_ten_tai_khoan" />
@@ -104,7 +104,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="24dp"
-            android:background="@drawable/et_bg"
+            android:background="@drawable/et_bg2"
             android:orientation="horizontal"
             android:padding="16dp"
             app:layout_constraintStart_toEndOf="@+id/textView5"
@@ -114,14 +114,15 @@
                 android:id="@+id/rb_gt_nam"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nam" />
+                android:text="@string/update_info_gender_male" />
 
             <RadioButton
                 android:id="@+id/rb_gt_nu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:text="Nữ" />
+                android:text="@string/update_info_gender_felmale"
+                android:layout_marginStart="16dp" />
         </RadioGroup>
 
         <TextView
@@ -129,7 +130,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Số điện thoại"
+            android:text="@string/update_info_phone_number"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/rg_gioi_tinh" />
@@ -139,9 +140,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:background="@drawable/et_bg"
+            android:background="@drawable/et_bg2"
             android:ems="10"
-            android:hint="Số điện thoại"
+            android:hint="@string/update_info_set_phone_number"
             android:inputType="textPersonName"
             android:padding="16dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -166,8 +167,7 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/et_bg"
-                android:backgroundTint="@color/vang"
-                android:text="Sửa" />
+                android:text="@string/update_info_btn_confirm" />
 
             <Button
                 android:id="@+id/btn_change_info_huy"
@@ -175,8 +175,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="48dp"
                 android:background="@drawable/et_bg"
-                android:backgroundTint="@color/vang"
-                android:text="Hủy" />
+                android:text="@string/update_info_btn_cancel"
+                android:layout_marginStart="48dp" />
 
         </LinearLayout>
 

@@ -16,13 +16,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/tv_addpost_dangbai"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Đăng Bài"
+            android:text="@string/add_post_title"
             android:textColor="@color/black"
-            android:textSize="30dp"
+            android:textSize="30sp"
             android:textStyle="bold" />
     </androidx.appcompat.widget.Toolbar>
 
@@ -43,23 +42,21 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="24dp"
-        android:src="@drawable/iconfinder_image"
+        android:src="@drawable/ic_image_32"
         app:layout_constraintStart_toEndOf="@+id/imgV_addpost_addPostAnh"
         app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
 
     <ImageView
-        android:id="@+id/imgbn_addpost_mayAnh"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
-        android:src="@drawable/iconfinder_camera"
+        android:src="@drawable/ic_camera_32"
         app:layout_constraintStart_toEndOf="@+id/imgV_addpost_addPostAnh"
         app:layout_constraintTop_toBottomOf="@+id/imgbn_addpost_thuVienAnh" />
 
     <ScrollView
-        android:id="@+id/scrollView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
@@ -75,7 +72,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <LinearLayout
-                android:id="@+id/linearLayout2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -89,12 +85,11 @@
                     app:hintEnabled="false">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edt_addpost_tieuDe"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:background="@drawable/et_bg"
-                        android:hint="Tiêu Đề"
+                        android:background="@drawable/et_bg2"
+                        android:hint="@string/add_post_set_title"
                         android:padding="16dp"
                         android:textSize="18sp" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -107,12 +102,11 @@
                     app:hintEnabled="false">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edt_addpost_giaPhong"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:layout_gravity="center"
-                        android:background="@drawable/et_bg"
-                        android:hint="Giá"
+                        android:background="@drawable/et_bg2"
+                        android:hint="@string/add_post_set_price"
                         android:padding="16dp"
                         android:textSize="18sp" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -126,11 +120,10 @@
                     app:hintEnabled="false">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edt_addpost_diaChi"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
-                        android:background="@drawable/et_bg"
-                        android:hint="Địa Chỉ"
+                        android:background="@drawable/et_bg2"
+                        android:hint="@string/add_post_set_address"
                         android:padding="16dp"
                         android:textSize="18sp" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -144,31 +137,29 @@
                     app:hintEnabled="false">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edt_addpost_soDT"
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/et_bg"
-                        android:hint="Số Điện Thoại"
-                        android:padding="16dp"
-                        android:textSize="18sp" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-
-                    app:hintEnabled="false">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edt_addpost_dienTich"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:layout_gravity="center"
-                        android:background="@drawable/et_bg"
-                        android:hint="Diện Tích"
+                        android:background="@drawable/et_bg2"
+                        android:hint="@string/add_post_set_phone_number"
+                        android:padding="16dp"
+                        android:textSize="18sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+
+                    app:hintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/et_bg2"
+                        android:hint="@string/add_post_set_acreage"
                         android:padding="16dp"
                         android:textSize="18sp" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -181,12 +172,11 @@
                     app:hintEnabled="false">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edt_addpost_moTaPhong"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="@drawable/bg_mo_ta"
-                        android:hint="Mô Tả"
+                        android:hint="@string/add_post_set_decription"
                         android:inputType="text|textMultiLine"
                         android:padding="16dp"
                         android:textSize="18sp" />
@@ -201,23 +191,21 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btn_addpost_Dang"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="32dp"
                     android:background="@drawable/et_bg"
-                    android:backgroundTint="@color/vang"
-                    android:text="Đăng"
-                    android:textSize="20dp" />
+                    android:text="@string/add_post_btn_confirm"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="32dp" />
 
                 <Button
-                    android:id="@+id/btn_addpost_Huy"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/et_bg"
-                    android:backgroundTint="@color/vang"
-                    android:text="Hủy"
-                    android:textSize="20dp" />
+
+                    android:text="@string/add_post_btn_cancel"
+                    android:textSize="20sp" />
             </LinearLayout>
         </LinearLayout>
 

@@ -31,7 +31,7 @@ public class PostPersonalAdapter extends RecyclerView.Adapter<PostPersonalAdapte
     @NonNull
     @Override
     public PostPersonalHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(context).inflate(R.layout.item_quanlibaidang, null);
+        View v = LayoutInflater.from(context).inflate(R.layout.item_quanlibaidang, parent,false);
         PostPersonalHolder holder = new PostPersonalHolder(v);
         return holder;
     }
@@ -48,19 +48,15 @@ public class PostPersonalAdapter extends RecyclerView.Adapter<PostPersonalAdapte
                 menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem menuItem) {
-                        switch (menuItem.getItemId()){
-                            case R.id.menu_post_manager_edit:
-                                Toast.makeText(context, "Edit", Toast.LENGTH_SHORT).show();
-                                Log.d(TAG, "onMenuItemClick: Edit");
-                                return true;
+                        if(menuItem.getItemId() == R.id.menu_post_manager_delete){
+                            Log.d(TAG, "onMenuItemClick: Delete");
+                            return true;
+                        }else if(menuItem.getItemId() == R.id.menu_post_manager_edit){
+                            Log.d(TAG, "onMenuItemClick: Edit");
+                            return true;
+                        }else return false;
 
-                            case R.id.menu_post_manager_delete:
-                                Toast.makeText(context, "Delete", Toast.LENGTH_SHORT).show();
-                                Log.d(TAG, "onMenuItemClick: Delete");
-                                return true;
-                            default:
-                                return false;
-                        }
+
                     }
                 });
                 menu.show();

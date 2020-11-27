@@ -28,19 +28,18 @@
                 android:background="@drawable/bg_spinner" />
 
             <ImageView
-                android:id="@+id/imgV_main_filterloc"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="8dp"
                 android:layout_weight="1"
-                android:src="@drawable/iconfilter_loc" />
+                android:src="@drawable/iconfilter_loc"
+                android:layout_marginStart="8dp" />
         </LinearLayout>
 
     </androidx.appcompat.widget.Toolbar>
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView_main_bangTin"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"

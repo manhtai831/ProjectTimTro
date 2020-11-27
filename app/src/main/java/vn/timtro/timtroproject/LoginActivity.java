@@ -121,7 +121,7 @@ public class LoginActivity extends AppCompatActivity {
             editor.putString("pass","");
             editor.putBoolean("checkbox",false);
         }
-        editor.commit();
+        editor.apply();
 
 
         

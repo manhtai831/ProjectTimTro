@@ -1,28 +1,93 @@
 <resources>
     <string name="app_name">MyDuAn1</string>
     <string name="title_activity_login">LoginActivity</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
 
-    <string name="title_activity_main2">MainActivity2</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <!--    Login-->
+    <string name="login_title">Tìm Cho Thuê Nhà Trọ</string>
+    <string name="login_hint_user_name">Username</string>
+    <string name="login_hint_password">Password</string>
+    <string name="login_save_password">Lưu mật khẩu</string>
+    <string name="login_btn_sign_in">Đăng Nhập</string>
+    <string name="login_btn_sign_up">Đăng Ký</string>
+    <string name="login_others">hoặc đăng nhập bằng</string>
+<!--    Menu Bottom Navigation-->
+    <string name="menu_nav_home">Home</string>
+    <string name="menu_nav_post">Đăng bài</string>
+    <string name="menu_nav_profile">Tôi</string>
+<!--    Personal Info-->
+    <string name="personal_info_title">Thông Tin Người Dùng</string>
+    <string name="personal_info_name">Họ Tên: </string>
+    <string name="personal_info_get_name">Họ và tên</string>
+    <string name="personal_info_user_name">"Tên Tài Khoản: </string>
+    <string name="personal_info_get_user_name">Tên tài khoản</string>
+    <string name="personal_info_gender">Giới Tính: </string>
+    <string name="personal_info_get_gender">Giới tính</string>
+    <string name="personal_info_phone_number">Số Điện Thoại: </string>
+    <string name="personal_info_get_phone_number">Số điện thoại</string>
+<!--    Post Manager-->
+    <string name="post_manager_title">Quản Lí Bài Đăng</string>
+<!--    Update Password-->
+    <string name="update_password_title">Cập Nhật PassWord</string>
+    <string name="update_password_old_pass">Mật Khẩu Cũ</string>
+    <string name="update_password_new_pass">Mật Khẩu Mới</string>
+    <string name="update_password_new_pass_2">Nhập Lại mật khẩu Mới</string>
+    <string name="update_password_btn_confirm">Cập Nhật</string>
+    <string name="update_password_btn_cancel">Hủy</string>
+<!--    Post Expand-->
+    <string name="post_expand_price">5.000.000 VND</string>
+    <string name="post_expand_phone_number">0899999999</string>
+    <string name="post_expand_acreage">35m2</string>
+    <string name="post_expand_title_post">Cho thuê phòng trọ cao cấp gần đường Láng</string>
+    <string name="post_expand_address">Phường Mỹ Đình , Nam Từ Liêm , Hà Nội</string>
+    <string name="post_expand_brand">Cho thuê chung cư mini</string>
+    <string name="post_expand_describle">"Mô tả: "</string>
+    <string name="post_expand_get_decrible">Giờ giấc thoải mái , có full option , an ninh tốt</string>
+<!--    Update Infomation-->
+    <string name="update_info_title">Cập nhật thông tin</string>
+    <string name="update_info_name">Họ và tên</string>
+    <string name="update_info_set_name">Họ và tên</string>
+    <string name="update_info_user_name">Tên tài khoản</string>
+    <string name="update_info_set_user_name">Tên tài khoản</string>
+    <string name="update_info_gender">Giới tính</string>
+    <string name="update_info_gender_male">Nam</string>
+    <string name="update_info_gender_felmale">Nữ</string>
+    <string name="update_info_phone_number">Số điện thoại</string>
+    <string name="update_info_set_phone_number">Số điện thoại</string>
+    <string name="update_info_btn_confirm">Sửa</string>
+    <string name="update_info_btn_cancel">Hủy</string>
+<!--    Sign Up-->
+    <string name="sign_up_title">Đăng Ký</string>
+    <string name="sign_up_user_name">Tên Tài Khoản</string>
+    <string name="sign_up_name">Họ Tên</string>
+    <string name="sign_up_gender">Giới Tính</string>
+    <string name="sign_up_gender_male">Nam</string>
+    <string name="sign_up_gender_female">Nữ</string>
+    <string name="sign_up_phone_number">Số Điện Thoại</string>
+    <string name="sign_up_password_1">Mật Khẩu</string>
+    <string name="sign_up_password_2">Nhập Lại mật khẩu</string>
+    <string name="sign_up_btn_confirm">Đăng Ký</string>
+    <string name="sign_up_btn_cancel">Hủy</string>
+<!--    Filter-->
+    <string name="filter_acreage">Diện Tích (m2)</string>
+    <string name="filter_price">Gía tiền</string>
+    <!--    Add Post-->
+    <string name="add_post_title">Đăng Bài</string>
+    <string name="add_post_set_title">Tiêu Đề</string>
+    <string name="add_post_set_price">Giá</string>
+    <string name="add_post_set_address">Địa Chỉ</string>
+    <string name="add_post_set_phone_number">Số Điện Thoại</string>
+    <string name="add_post_set_acreage">Diện Tích</string>
+    <string name="add_post_set_decription">Mô Tả</string>
+    <string name="add_post_btn_confirm">Đăng</string>
+    <string name="add_post_btn_cancel">Hủy</string>
+<!--    Personal Fragment-->
+    <string name="personal_title">Người dùng</string>
+    <string name="personal_post" >Bài Đăng</string>
+    <string name="personal_infomation">Thông Tin</string>
+    <string name="personal_update_info">Chỉnh Sửa Thông Tin</string>
+    <string name="personal_update_password">Cập Nhật Mật Khẩu</string>
+    <string name="personal_btn_sign_out">Đăng Xuất</string>
+<!--    Dialog-->
+    <string name="delete">Delete</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <string name="title_home">Home</string>
-    <string name="title_post">addPost</string>
-    <string name="title_profile">Profile</string>
-    >>>>>>> origin/master
 </resources>

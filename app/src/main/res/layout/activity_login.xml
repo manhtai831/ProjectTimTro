@@ -18,7 +18,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="16dp"
-        android:src="@drawable/iconfinder_house"
+        android:src="@drawable/ic_home_96"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_login" />
@@ -30,8 +30,8 @@
         android:layout_below="@id/iconlogo"
         android:layout_marginTop="32dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Tìm &amp; Cho Thuê Nhà Trọ"
-        android:textSize="25dp"
+        android:text="@string/login_title"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -66,12 +66,12 @@
                     android:id="@+id/ed_login_Username"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:background="@drawable/et_bg"
+                    android:background="@drawable/et_bg2"
                     android:fontFamily="sans-serif-light"
-                    android:hint="Username"
+                    android:hint="@string/login_hint_user_name"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:textSize="22dp" />
+                    android:textSize="22sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
@@ -92,12 +92,12 @@
                     android:id="@+id/ed_login_Pass"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:background="@drawable/et_bg"
+                    android:background="@drawable/et_bg2"
                     android:fontFamily="sans-serif-light"
-                    android:hint="Password"
+                    android:hint="@string/login_hint_password"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:textSize="22dp"
+                    android:textSize="22sp"
                     android:inputType="textPassword"/>
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -109,8 +109,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:autoLink="none"
-            android:text="Lưu mật khẩu"
-            android:textSize="20dp" />
+            android:text="@string/login_save_password"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -128,11 +128,11 @@
             android:id="@+id/btn_login_Login"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="48dp"
             android:background="@drawable/et_bg"
-            android:backgroundTint="@color/vang"
-            android:text="Đăng Nhập"
-            android:textSize="20dp" />
+            android:text="@string/login_btn_sign_in"
+            android:textSize="20sp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginRight="48dp" />
 
 
         <Button
@@ -140,10 +140,9 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:background="@drawable/et_bg"
-            android:backgroundTint="@color/vang"
-            android:text="Đăng Ký"
+            android:text="@string/login_btn_sign_up"
             android:textAllCaps="true"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
     </LinearLayout>
 
     <TextView
@@ -152,7 +151,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/linlay1"
         android:layout_marginTop="48dp"
-        android:text="hoặc đăng nhập bằng"
+        android:text="@string/login_others"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -163,7 +162,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="16dp"
-        android:layout_marginRight="4dp"
         android:orientation="horizontal"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
@@ -175,7 +173,6 @@
             android:id="@+id/img_login_FB"
             android:layout_width="60dp"
             android:layout_height="60dp"
-
             android:src="@drawable/icon_fb" />
 
         <ImageView
@@ -183,14 +180,16 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginLeft="45dp"
-            android:src="@drawable/icon_twitter" />
+            android:src="@drawable/ic_twiter_48"
+            android:layout_marginStart="45dp" />
 
         <ImageView
             android:id="@+id/img_login_Google"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginLeft="45dp"
-            android:src="@drawable/icon_google" />
+            android:src="@drawable/ic_google_48"
+            android:layout_marginStart="45dp" />
     </LinearLayout>
 
 

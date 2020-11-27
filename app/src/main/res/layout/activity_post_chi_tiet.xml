@@ -26,9 +26,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-
                 android:layout_marginTop="16dp"
-
                 android:background="@color/hong" />
 
             <androidx.cardview.widget.CardView
@@ -50,8 +48,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="5.000.000 VND"
-                        android:textSize="30dp"
+                        android:text="@string/post_expand_price"
+                        android:textSize="30sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -66,15 +64,14 @@
                         app:layout_constraintTop_toBottomOf="@+id/tv_postchitiet_giaphong" />
 
                     <TextView
-                        android:id="@+id/tv_postchitiet_dienTich"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginStart="8dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="8dp"
-                        android:text="35m2"
-                        android:textSize="25dp"
+                        android:text="@string/post_expand_acreage"
+                        android:textSize="25sp"
                         app:layout_constraintStart_toEndOf="@+id/img_postchitiet_phone"
                         app:layout_constraintTop_toBottomOf="@+id/tv_postchitiet_soDienThoai" />
 
@@ -95,9 +92,8 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="8dp"
-
-                        android:text="0899999999"
-                        android:textSize="25dp"
+                        android:text="@string/post_expand_phone_number"
+                        android:textSize="25sp"
                         app:layout_constraintStart_toEndOf="@+id/img_postchitiet_S"
                         app:layout_constraintTop_toBottomOf="@+id/tv_postchitiet_giaphong" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -105,16 +101,15 @@
 
 
             <TextView
-                android:id="@+id/tv_postchitiet_ten"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
 
                 android:layout_marginTop="16dp"
 
-                android:text="Cho thuê phòng trọ cao cấp gần đường Láng"
+                android:text="@string/post_expand_title_post"
                 android:textColor="@color/black"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -124,7 +119,6 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/imageView44"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
 
@@ -132,13 +126,13 @@
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
-                    android:id="@+id/tv_postchitiet_diaChi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
-                    android:text="Phường Mỹ Đình , Nam Từ Liêm , Hà Nội"
+                    android:text="@string/post_expand_address"
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:layout_marginStart="8dp" />
             </LinearLayout>
 
 
@@ -157,13 +151,13 @@
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
-                    android:id="@+id/tv_postchitiet_loaiphong"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
-                    android:text="Cho thuê chung cư mini"
+                    android:text="@string/post_expand_brand"
                     android:textColor="@color/black"
-                    android:textSize="18dp" />
+                    android:textSize="18sp"
+                    android:layout_marginStart="8dp" />
             </LinearLayout>
 
             <ImageView
@@ -178,23 +172,24 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginRight="8dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginEnd="8dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Mô tả :"
+                    android:text="@string/post_expand_describle"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/tv_postchitiet_moTa"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
-                    android:text="Giờ giấc thoải mái , có full option , an ninh tốt"
+                    android:text="@string/post_expand_get_decrible"
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:layout_marginStart="8dp" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

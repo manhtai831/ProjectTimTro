@@ -17,9 +17,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Đăng Ký"
+                android:text="@string/sign_up_title"
                 android:textColor="@color/black"
-                android:textSize="30dp"
+                android:textSize="30sp"
                 android:textStyle="bold" />
         </androidx.appcompat.widget.Toolbar>
 
@@ -47,8 +47,8 @@
                     android:id="@+id/ed_SignUp_NhapUserName"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:background="@drawable/et_bg"
-                    android:hint="Tên Tài Khoản"
+                    android:background="@drawable/et_bg2"
+                    android:hint="@string/sign_up_user_name"
                     android:paddingLeft="24dp"
                     android:paddingRight="24dp"
                     android:textSize="18sp" />
@@ -72,8 +72,8 @@
                     android:id="@+id/ed_SignUp_HoTen"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:background="@drawable/et_bg"
-                    android:hint="Họ Tên"
+                    android:background="@drawable/et_bg2"
+                    android:hint="@string/sign_up_name"
                     android:paddingLeft="24dp"
                     android:paddingRight="24dp"
 
@@ -86,7 +86,7 @@
             android:layout_height="60dp"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
-            android:background="@drawable/et_bg"
+            android:background="@drawable/et_bg2"
             android:orientation="horizontal">
 
             <TextView
@@ -94,8 +94,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="16dp"
-                android:text="Giới Tính"
-                android:textSize="18sp" />
+                android:text="@string/sign_up_gender"
+                android:textSize="18sp"
+                android:layout_marginStart="24dp" />
 
             <RadioGroup
                 android:id="@+id/radioGruoup_SignUp_GioiTinh"
@@ -103,22 +104,23 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="60dp"
                 android:layout_marginTop="16dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginStart="60dp">
 
                 <RadioButton
                     android:id="@+id/rbn_SignUp_GTNam"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nam"
+                    android:text="@string/sign_up_gender_male"
                     android:textSize="18sp" />
 
                 <RadioButton
-                    android:id="@+id/rbn_SignUp_GTNu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
-                    android:text="Nữ"
-                    android:textSize="18sp" />
+                    android:text="@string/sign_up_gender_female"
+                    android:textSize="18sp"
+                    android:layout_marginStart="8dp" />
             </RadioGroup>
         </LinearLayout>
 
@@ -138,8 +140,8 @@
                     android:id="@+id/ed_SignUp_SoDienThoai"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:background="@drawable/et_bg"
-                    android:hint="Số Điện Thoại"
+                    android:background="@drawable/et_bg2"
+                    android:hint="@string/sign_up_phone_number"
                     android:paddingLeft="24dp"
                     android:paddingRight="24dp"
                     android:textSize="18sp" />
@@ -163,8 +165,8 @@
                     android:id="@+id/ed_SignUp_NhapPassword"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:background="@drawable/et_bg"
-                    android:hint="Mật Khẩu"
+                    android:background="@drawable/et_bg2"
+                    android:hint="@string/sign_up_password_1"
                     android:paddingLeft="24dp"
                     android:paddingRight="24dp"
                     android:inputType="textPassword"
@@ -190,8 +192,8 @@
                     android:id="@+id/ed_SignUp_NhapLaiPassword"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:background="@drawable/et_bg"
-                    android:hint="Nhập Lại mật khẩu"
+                    android:background="@drawable/et_bg2"
+                    android:hint="@string/sign_up_password_2"
                     android:paddingLeft="24dp"
                     android:paddingRight="24dp"
                     android:inputType="textPassword"
@@ -218,9 +220,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/et_bg"
-                android:backgroundTint="@color/vang"
-                android:text="Đăng Ký"
-                android:textSize="20dp" />
+
+                android:text="@string/sign_up_btn_confirm"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/btn_SignUp_Huy"
@@ -228,10 +230,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="24dp"
+                android:text="@string/sign_up_btn_cancel"
                 android:background="@drawable/et_bg"
-                android:backgroundTint="@color/vang"
-                android:text="Hủy"
-                android:textSize="20dp" />
+                android:textSize="20sp"
+                android:layout_marginStart="24dp" />
         </LinearLayout>
     </LinearLayout>
 
