@@ -88,8 +88,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="@string/personal_info_get_user_name"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -133,8 +132,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="@string/personal_info_get_phone_number"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textSize="20sp" />
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
