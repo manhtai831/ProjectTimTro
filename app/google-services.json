@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "296290070489",
+    "firebase_url": "https://myduan1-fd49c.firebaseio.com",
+    "project_id": "myduan1-fd49c",
+    "storage_bucket": "myduan1-fd49c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:296290070489:android:858330424061b38a7973c8",
+        "android_client_info": {
+          "package_name": "vn.timtro.timtroproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "296290070489-2ht3dqqsc030rkv1iqe486upci5g1khg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbqzXfrEBs4uPFh-Yq4iP6haPPkhTTod8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "296290070489-2ht3dqqsc030rkv1iqe486upci5g1khg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
