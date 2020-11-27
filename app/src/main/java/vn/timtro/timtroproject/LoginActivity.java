@@ -44,13 +44,7 @@ public class LoginActivity extends AppCompatActivity {
     private ImageView imgLoginTwitter;
     private ImageView imgLoginGoogle;
 
-
-
     ArrayList<User> users;
-
-
-
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -120,14 +114,14 @@ public class LoginActivity extends AppCompatActivity {
 
 
         
-        databaseReference.child("user").child(s1).addChildEventListener(new ChildEventListener() {
+        databaseReference.child("user").child(s1.trim()).addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                Log.d(TAG, "onDataChange: " + snapshot.child("password").getValue().toString());
+                Log.d(TAG, "onDataChange: " + snapshot.child("password").getValue(String.class));
                 ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this);
                 progressDialog.setMessage("Xin chờ ...");
                 progressDialog.show();
-                if(s2.equals(snapshot.child("password").getValue().toString())){
+                if(s2.equals(snapshot.child("password").getValue(String.class))){
                     startActivity(new Intent(LoginActivity.this,MainActivity.class));
                     finish();
                     progressDialog.dismiss();

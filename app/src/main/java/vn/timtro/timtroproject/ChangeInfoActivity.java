@@ -4,10 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class ChangeInfoActivity extends AppCompatActivity {
     private Toolbar toolbarUpdateInfo;
@@ -19,6 +23,7 @@ public class ChangeInfoActivity extends AppCompatActivity {
     private EditText edtSoDienThoai;
     private Button btnChangeInfoSua;
     private Button btnChangeInfoHuy;
+    DatabaseReference databaseReference;
 
 
 
@@ -33,6 +38,25 @@ public class ChangeInfoActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        setClickButton();
+    }
+
+    private void setClickButton() {
+        databaseReference = FirebaseDatabase.getInstance().getReference();
+        btnChangeInfoSua.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        btnChangeInfoHuy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
     private void anhXa() {
