@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <item android:state_checked="true"
+        android:drawable="@drawable/bg_button_active"/>
+    <item android:state_checked="false">
+        <shape android:shape="rectangle">
+            <corners android:radius="2dp" />
+            <solid android:color="#E8E8E8" />
+        </shape>
+    </item>
+
+
+</selector>

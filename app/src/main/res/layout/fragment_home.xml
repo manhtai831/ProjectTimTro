@@ -7,7 +7,7 @@
 
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/toolbar_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@null"
@@ -21,30 +21,47 @@
             android:layout_height="match_parent"
             android:weightSum="10">
 
-            <androidx.appcompat.widget.SearchView
+            <EditText
+                android:id="@+id/search_view"
                 android:layout_width="0dp"
+                android:padding="12dp"
+                android:hint="@string/search"
                 android:layout_height="wrap_content"
-                android:layout_weight="8.5"
-                android:background="@drawable/bg_spinner" />
+                android:layout_weight="8"
+                android:background="@drawable/bg_spinner"
+                android:inputType="text">
+                <requestFocus/>
+            </EditText>
 
             <ImageView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="8dp"
+                android:layout_gravity="center"
                 android:layout_weight="1"
-                android:src="@drawable/iconfilter_loc"
-                android:layout_marginStart="8dp" />
+                android:id="@+id/iv_change_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_grid_3_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar_home" />
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/iv_filter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_filter_24" />
         </LinearLayout>
 
     </androidx.appcompat.widget.Toolbar>
 
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_home"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_home" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,120 +17,102 @@
 
             <ImageButton
                 android:id="@+id/ib_menu"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:scaleType="fitXY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@null"
-                android:src="@drawable/icon_menu_vertical_48"
+                android:scaleType="fitXY"
+                android:src="@drawable/baseline_menu_black_24dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/vp_quan_li_bai_dang"
+                android:id="@+id/iv_item_home_image"
                 android:layout_width="match_parent"
-                android:src="@drawable/no_image"
                 android:layout_height="150dp"
+                android:src="@drawable/no_image"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ib_menu" />
 
             <TextView
-                android:id="@+id/tv_quan_li_bai_dang_title"
-                android:layout_width="wrap_content"
+
+                android:id="@+id/tv_item_home_title"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/add_post_set_title"
+                android:maxLines="1"
                 android:textColor="#000000"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/vp_quan_li_bai_dang" />
+                app:layout_constraintTop_toBottomOf="@+id/iv_item_home_image" />
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/ic_m2"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_quan_li_bai_dang_title" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_item_home_title" />
 
             <TextView
-                android:id="@+id/tv_item_quanlibaidang_dientich"
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_item_home_acreage"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/filter_acreage"
                 android:textColor="#000000"
-                android:textSize="18sp"
+                android:maxLines="1"
 
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/imageView"
-                app:layout_constraintTop_toBottomOf="@+id/tv_quan_li_bai_dang_title" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_item_home_title" />
 
             <ImageView
-                android:src="@drawable/ic_price_48"
                 android:id="@+id/imageView2"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:src="@drawable/outline_local_offer_black_24dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
             <TextView
-                android:id="@+id/tv_item_quanlibaidang_giatien"
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_item_home_price"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/filter_price"
                 android:textColor="#000000"
-                android:textSize="18sp"
-
-                app:layout_constraintStart_toEndOf="@+id/imageView2"
-                app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginStart="156dp"
-                android:layout_marginLeft="156dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/ic_phone"
-                app:layout_constraintStart_toEndOf="@+id/imageView2"
-                app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-            <TextView
-                android:id="@+id/tv_item_quanlibaidang_numberPhone"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/personal_info_phone_number"
-                android:textColor="#000000"
-                android:textSize="18sp"
+                android:maxLines="1"
 
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
             <ImageView
                 android:id="@+id/imageView4"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:src="@drawable/icon_address"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
             <TextView
-                android:id="@+id/tv_quan_li_bai_dang_address"
+                android:id="@+id/tv_item_home_address"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -139,7 +121,7 @@
                 android:text="@string/add_post_set_address"
                 android:textColor="#000000"
 
-                android:textSize="18sp"
+                android:maxLines="1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView4"
                 app:layout_constraintTop_toBottomOf="@+id/imageView2" />

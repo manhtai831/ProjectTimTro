@@ -13,175 +13,180 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/update_info_title"
-            android:textColor="@color/black"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-    </androidx.appcompat.widget.Toolbar>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="32dp"
-        android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar_update_info">
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
-            android:text="@string/update_info_name"
-            android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <EditText
-
-            android:id="@+id/edt_ho_ten"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/et_bg2"
-            android:ems="10"
-            android:hint="@string/update_info_set_name"
-            android:inputType="textPersonName"
-            android:padding="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/update_info_user_name"
-            android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edt_ho_ten" />
-
-        <EditText
-            android:id="@+id/edt_ten_tai_khoan"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/et_bg2"
-            android:ems="10"
-            android:hint="@string/update_info_set_user_name"
-            android:inputType="textPersonName"
-            android:padding="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4"
-            android:importantForAutofill="no" />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:text="@string/update_info_gender"
-            android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edt_ten_tai_khoan" />
-
-        <RadioGroup
-            android:id="@+id/rg_gioi_tinh"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/et_bg2"
-            android:orientation="horizontal"
-            android:padding="16dp"
-            app:layout_constraintStart_toEndOf="@+id/textView5"
-            app:layout_constraintTop_toBottomOf="@+id/edt_ten_tai_khoan">
-
-            <RadioButton
-                android:id="@+id/rb_gt_nam"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/update_info_gender_male" />
-
-            <RadioButton
-                android:id="@+id/rb_gt_nu"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:text="@string/update_info_gender_felmale"
-                android:layout_marginStart="16dp" />
-        </RadioGroup>
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/update_info_phone_number"
-            android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rg_gioi_tinh" />
-
-        <EditText
-            android:id="@+id/edt_so_dien_thoai"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/et_bg2"
-            android:ems="10"
-            android:hint="@string/update_info_set_phone_number"
-            android:inputType="textPersonName"
-            android:padding="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView6"
-            android:importantForAutofill="no" />
-
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginTop="32dp"
-            android:gravity="center"
-            android:orientation="horizontal"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edt_so_dien_thoai">
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_update_info">
 
-            <Button
-
-                android:id="@+id/btn_change_info_sua"
-                android:layout_width="120dp"
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/et_bg"
-                android:text="@string/update_info_btn_confirm" />
+                android:layout_marginTop="16dp"
+                android:text="@string/update_info_name"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/btn_change_info_huy"
-                android:layout_width="120dp"
+            <EditText
+
+                android:id="@+id/edt_ho_ten"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="48dp"
-                android:background="@drawable/et_bg"
-                android:text="@string/update_info_btn_cancel"
-                android:layout_marginStart="48dp" />
+                android:layout_marginTop="8dp"
+                android:background="@drawable/et_bg2"
+                android:ems="10"
+                android:hint="@string/update_info_set_name"
+                android:inputType="textPersonName"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-        </LinearLayout>
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/update_info_user_name"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_ho_ten" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <EditText
+                android:id="@+id/edt_ten_tai_khoan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/et_bg2"
+                android:ems="10"
+                android:hint="@string/update_info_set_user_name"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:text="@string/update_info_gender"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_ten_tai_khoan" />
+
+            <RadioGroup
+                android:id="@+id/rg_gioi_tinh"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/et_bg2"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:weightSum="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView5"
+                app:layout_constraintTop_toBottomOf="@+id/edt_ten_tai_khoan">
+
+                <RadioButton
+                    android:id="@+id/rb_gt_nam"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/update_info_gender_male" />
+
+                <RadioButton
+                    android:id="@+id/rb_gt_nu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:text="@string/update_info_gender_felmale" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/update_info_phone_number"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rg_gioi_tinh" />
+
+            <EditText
+                android:id="@+id/edt_so_dien_thoai"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/et_bg2"
+                android:ems="10"
+                android:hint="@string/update_info_set_phone_number"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_so_dien_thoai">
+
+                <Button
+
+                    android:id="@+id/btn_change_info_sua"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/et_bg"
+                    android:text="@string/update_info_btn_confirm" />
+
+                <Button
+                    android:id="@+id/btn_change_info_huy"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginLeft="48dp"
+                    android:background="@drawable/et_bg"
+                    android:text="@string/update_info_btn_cancel" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

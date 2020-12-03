@@ -12,14 +12,6 @@
             android:background="@null"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/personal_info_title"
-                android:textSize="30sp"
-                android:textStyle="bold" />
         </androidx.appcompat.widget.Toolbar>
 
 
@@ -38,14 +30,14 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/img_personal_main_info_avatar"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
                 android:layout_gravity="center"
                 android:src="@drawable/user_3">
 
-            </ImageView>
+            </de.hdodenhof.circleimageview.CircleImageView>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -62,6 +54,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:layout_marginLeft="8dp"
                     android:id="@+id/tv_personal_main__info_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -84,6 +77,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:layout_marginLeft="8dp"
                     android:id="@+id/tv_personal_main__info_Taikhoan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -106,6 +100,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:layout_marginLeft="8dp"
                     android:id="@+id/tv_personal_main__info_sex"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -128,6 +123,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:layout_marginLeft="8dp"
                     android:id="@+id/tv_personal_main__info_numberPhone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

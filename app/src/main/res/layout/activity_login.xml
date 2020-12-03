@@ -15,8 +15,8 @@
 
     <ImageView
         android:id="@+id/iconlogo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:src="@drawable/ic_home_96"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,13 +65,12 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/ed_login_Username"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/et_bg2"
                     android:fontFamily="sans-serif-light"
                     android:hint="@string/login_hint_user_name"
-                    android:paddingLeft="20dp"
-                    android:paddingRight="20dp"
-                    android:textSize="22sp" />
+                    android:padding="16dp"
+                    android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
@@ -95,9 +94,8 @@
                     android:background="@drawable/et_bg2"
                     android:fontFamily="sans-serif-light"
                     android:hint="@string/login_hint_password"
-                    android:paddingLeft="20dp"
-                    android:paddingRight="20dp"
-                    android:textSize="22sp"
+                    android:padding="16dp"
+                    android:textSize="18sp"
                     android:inputType="textPassword"/>
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -125,24 +123,25 @@
         app:layout_constraintTop_toBottomOf="@+id/linlay1">
 
         <Button
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
             android:id="@+id/btn_login_Login"
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/et_bg"
             android:text="@string/login_btn_sign_in"
-            android:textSize="20sp"
             android:layout_marginEnd="48dp"
             android:layout_marginRight="48dp" />
 
 
         <Button
+            android:gravity="center"
             android:id="@+id/btn_login_SignUp"
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/et_bg"
-            android:text="@string/login_btn_sign_up"
-            android:textAllCaps="true"
-            android:textSize="20sp" />
+            android:text="@string/login_btn_sign_up" />
     </LinearLayout>
 
     <TextView
@@ -171,26 +170,34 @@
 
         <ImageView
             android:id="@+id/img_login_FB"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:src="@drawable/icon_fb" />
 
         <ImageView
             android:id="@+id/img_login_Twitter"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="45dp"
             android:src="@drawable/ic_twiter_48"
             android:layout_marginStart="45dp" />
 
         <ImageView
             android:id="@+id/img_login_Google"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="45dp"
             android:src="@drawable/ic_google_48"
             android:layout_marginStart="45dp" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_version_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

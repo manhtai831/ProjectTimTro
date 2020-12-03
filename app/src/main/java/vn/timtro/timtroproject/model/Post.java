@@ -1,28 +1,58 @@
 package vn.timtro.timtroproject.model;
 
-public class Post  {
-    private String[] image;
-    private String tieuDe, gia, diaChi, soDienThoai, dienTich, moTa;
+import java.io.Serializable;
+
+public class Post  implements Serializable {
+
+    private String id,idUser, tieuDe, gia, diaChi, soDienThoai, dienTich,danhMuc, moTa, timePost;
 
     public Post() {
     }
 
-    public Post(String[] image, String tieuDe, String gia, String diaChi, String soDienThoai, String dienTich, String moTa) {
-        this.image = image;
+
+    public Post(String id, String idUser,String tieuDe, String gia, String diaChi, String soDienThoai, String dienTich,String danhMuc, String moTa,String timePost) {
+        this.id = id;
+        this.idUser = idUser;
         this.tieuDe = tieuDe;
         this.gia = gia;
         this.diaChi = diaChi;
         this.soDienThoai = soDienThoai;
         this.dienTich = dienTich;
+        this.danhMuc = danhMuc;
         this.moTa = moTa;
+        this.timePost = timePost;
     }
 
-    public String[] getImage() {
-        return image;
+    public String getDanhMuc() {
+        return danhMuc;
     }
 
-    public void setImage(String[] image) {
-        this.image = image;
+    public void setDanhMuc(String danhMuc) {
+        this.danhMuc = danhMuc;
+    }
+
+    public String getTimePost() {
+        return timePost;
+    }
+
+    public void setTimePost(String timePost) {
+        this.timePost = timePost;
+    }
+
+    public String getIdUser() {
+        return idUser;
+    }
+
+    public void setIdUser(String idUser) {
+        this.idUser = idUser;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getTieuDe() {

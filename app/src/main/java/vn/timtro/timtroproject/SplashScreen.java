@@ -6,8 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Looper;
 import android.util.Log;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -15,12 +19,17 @@ import java.net.UnknownHostException;
 public class SplashScreen extends AppCompatActivity {
 
     private static final String TAG = "AAA";
+    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
+        TextView tvVersion = findViewById(R.id.tv_version);
 
+        tvVersion.setText("Phiên bản hiện tại: " + BuildConfig.VERSION_NAME);
         handleCheckConnect();
 
 
@@ -30,8 +39,12 @@ public class SplashScreen extends AppCompatActivity {
         final Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 if (isInternetAvailable()) {
-                    Log.d(TAG, "onCreate: co ket noi");
                     startActivity(new Intent(SplashScreen.this, LoginActivity.class));
                     finish();
                 } else {
@@ -56,6 +69,7 @@ public class SplashScreen extends AppCompatActivity {
                 }
             }
         });
+
         thread.start();
     }
 
@@ -63,8 +77,8 @@ public class SplashScreen extends AppCompatActivity {
         try {
             InetAddress address = InetAddress.getByName("www.google.com");
             return !address.equals("");
-        } catch (UnknownHostException e) {
-            // Log error
+        } catch (UnknownHostException ignored) {
+
         }
         return false;
     }

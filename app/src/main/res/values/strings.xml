@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyDuAn1</string>
+    <string name="app_name">Tìm nhà trọ</string>
     <string name="title_activity_login">LoginActivity</string>
 
     <!--    Login-->
@@ -10,12 +10,11 @@
     <string name="login_btn_sign_in">Đăng Nhập</string>
     <string name="login_btn_sign_up">Đăng Ký</string>
     <string name="login_others">hoặc đăng nhập bằng</string>
-<!--    Menu Bottom Navigation-->
+    <!--    Menu Bottom Navigation-->
     <string name="menu_nav_home">Home</string>
     <string name="menu_nav_post">Đăng bài</string>
     <string name="menu_nav_profile">Tôi</string>
-<!--    Personal Info-->
-    <string name="personal_info_title">Thông Tin Người Dùng</string>
+    <!--    Personal Info-->
     <string name="personal_info_name">Họ Tên: </string>
     <string name="personal_info_get_name">Họ và tên</string>
     <string name="personal_info_user_name">"Tên Tài Khoản: </string>
@@ -24,26 +23,22 @@
     <string name="personal_info_get_gender">Giới tính</string>
     <string name="personal_info_phone_number">Số Điện Thoại: </string>
     <string name="personal_info_get_phone_number">Số điện thoại</string>
-<!--    Post Manager-->
-    <string name="post_manager_title">Quản Lí Bài Đăng</string>
-<!--    Update Password-->
-    <string name="update_password_title">Cập Nhật PassWord</string>
+    <!--    Post Manager-->
+    <!--    Update Password-->
     <string name="update_password_old_pass">Mật Khẩu Cũ</string>
     <string name="update_password_new_pass">Mật Khẩu Mới</string>
     <string name="update_password_new_pass_2">Nhập Lại mật khẩu Mới</string>
     <string name="update_password_btn_confirm">Cập Nhật</string>
     <string name="update_password_btn_cancel">Hủy</string>
-<!--    Post Expand-->
+    <!--    Post Expand-->
     <string name="post_expand_price">5.000.000 VND</string>
-    <string name="post_expand_phone_number">0899999999</string>
-    <string name="post_expand_acreage">35m2</string>
+    <string name="post_expand_phone_number">Liên hệ ngay: số điện thoại</string>
+    <string name="post_expand_acreage">Diện tích: m2</string>
     <string name="post_expand_title_post">Cho thuê phòng trọ cao cấp gần đường Láng</string>
-    <string name="post_expand_address">Phường Mỹ Đình , Nam Từ Liêm , Hà Nội</string>
-    <string name="post_expand_brand">Cho thuê chung cư mini</string>
-    <string name="post_expand_describle">"Mô tả: "</string>
+    <string name="post_expand_address">Khu vực: Phường Mỹ Đình , Nam Từ Liêm , Hà Nội</string>
+    <string name="post_expand_brand">Thể loại: Cho thuê chung cư mini</string>
     <string name="post_expand_get_decrible">Giờ giấc thoải mái , có full option , an ninh tốt</string>
-<!--    Update Infomation-->
-    <string name="update_info_title">Cập nhật thông tin</string>
+    <!--    Update Infomation-->
     <string name="update_info_name">Họ và tên</string>
     <string name="update_info_set_name">Họ và tên</string>
     <string name="update_info_user_name">Tên tài khoản</string>
@@ -55,8 +50,7 @@
     <string name="update_info_set_phone_number">Số điện thoại</string>
     <string name="update_info_btn_confirm">Sửa</string>
     <string name="update_info_btn_cancel">Hủy</string>
-<!--    Sign Up-->
-    <string name="sign_up_title">Đăng Ký</string>
+    <!--    Sign Up-->
     <string name="sign_up_user_name">Tên Tài Khoản</string>
     <string name="sign_up_name">Họ Tên</string>
     <string name="sign_up_gender">Giới Tính</string>
@@ -67,7 +61,7 @@
     <string name="sign_up_password_2">Nhập Lại mật khẩu</string>
     <string name="sign_up_btn_confirm">Đăng Ký</string>
     <string name="sign_up_btn_cancel">Hủy</string>
-<!--    Filter-->
+    <!--    Filter-->
     <string name="filter_acreage">Diện Tích (m2)</string>
     <string name="filter_price">Gía tiền</string>
     <!--    Add Post-->
@@ -80,14 +74,31 @@
     <string name="add_post_set_decription">Mô Tả</string>
     <string name="add_post_btn_confirm">Đăng</string>
     <string name="add_post_btn_cancel">Hủy</string>
-<!--    Personal Fragment-->
+    <!--    Personal Fragment-->
     <string name="personal_title">Người dùng</string>
-    <string name="personal_post" >Bài Đăng</string>
+    <string name="personal_post">Bài Đăng Của Tôi</string>
     <string name="personal_infomation">Thông Tin</string>
     <string name="personal_update_info">Chỉnh Sửa Thông Tin</string>
     <string name="personal_update_password">Cập Nhật Mật Khẩu</string>
     <string name="personal_btn_sign_out">Đăng Xuất</string>
-<!--    Dialog-->
+    <!--    Dialog-->
     <string name="delete">Delete</string>
+    <string name="time_day">ngày trước</string>
+    <string name="time_hour">giờ trước</string>
+    <string name="time_minuates">phút trước</string>
+    <string name="time_second">Dưới 1 phút trước</string>
+    <string name="search">Tìm kiếm</string>
+    <string name="arena">Khu vực</string>
+    <string name="close">Đóng</string>
+    <string name="brand">Danh mục</string>
+    <string name="brand_self">Nhà trọ tự quản</string>
+    <string name="brand_home_stay">Homestay</string>
+    <string name="sort_new">Tin mới trước</string>
+    <string name="brand_price">Giá thấp trước</string>
+    <string name="sort_khoan_tien">Khoảng tiền</string>
+    <string name="toi_thieu">TỐI THIỂU</string>
+    <string name="toi_da">TỐI ĐA</string>
+    <string name="dien_tich">Diện tích (m2)</string>
+    <string name="xac_nhan">Xác nhận</string>
 
 </resources>

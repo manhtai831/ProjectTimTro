@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grad_bg"
+    tools:context=".FilterActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="4dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_filter"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/brand"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2.5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView1">
+
+                <CheckBox
+                    android:id="@+id/cb_filter_general"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="32dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingTop="12dp"
+
+                    android:paddingBottom="12dp"
+                    android:text="Nhà trọ chung chủ"
+                    android:textSize="12sp" />
+
+                <CheckBox
+                    android:id="@+id/cb_filter_self_manager"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:padding="12dp"
+                    android:text="@string/brand_self"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2.5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linearLayout4">
+
+                <CheckBox
+                    android:id="@+id/cb_filter_appartment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="32dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:text="Chung cư"
+                    android:textSize="12sp"
+                    android:layout_marginEnd="32dp" />
+
+                <CheckBox
+                    android:gravity="center"
+                    android:id="@+id/cb_filter_appartmant_mini"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:text="Chung cư mini"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2.5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+                <CheckBox
+                    android:id="@+id/cb_filter_homestay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="32dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:text="@string/brand_home_stay"
+                    android:textSize="12sp"
+                    android:layout_marginEnd="32dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:padding="12dp"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Khu vực"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+
+            <EditText
+                android:inputType="text"
+                android:lines="1"
+                android:hint="@string/arena"
+                android:id="@+id/sv_filter_arena"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#7CE8E8E8"
+                android:padding="8dp"
+                android:queryHint="Place"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sắp xếp"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lv_filter" />
+
+
+            <RadioGroup
+                android:id="@+id/rg_filter_sort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#7CE8E8E8"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:weightSum="2.5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+
+                <RadioButton
+
+                    android:id="@+id/rb_filter_new"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="32dp"
+
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button"
+                    android:padding="12dp"
+                    android:text="@string/sort_new"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_filter_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button"
+                    android:padding="12dp"
+                    android:text="@string/brand_price"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+                <!--                </LinearLayout>-->
+
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/sort_khoan_tien"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rg_filter_sort" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#7CE8E8E8"
+                android:gravity="center"
+                android:padding="6dp"
+                android:weightSum="2.5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+                <EditText
+                    android:id="@+id/edt_filter_money_min"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edittext"
+                    android:gravity="center"
+                    android:hint="@string/toi_thieu"
+                    android:lines="1"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    tools:ignore="HardcodedText"
+                    android:inputType="number" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="8dp"
+                    android:layout_weight="0.2"
+                    android:background="@drawable/hr1" />
+
+                <EditText
+                    android:id="@+id/edt_filter_money_max"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edittext"
+                    android:gravity="center"
+                    android:hint="@string/toi_da"
+                    android:lines="1"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:inputType="number" />
+
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/rg_filter_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#7CE8E8E8"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:weightSum="3.6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
+
+
+                <RadioButton
+                    android:id="@+id/rb_filter_money_suggest_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button"
+                    android:lines="1"
+                    android:gravity="center"
+                    android:text="100-800k"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_filter_money_suggest_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button"
+                    android:lines="1"
+                    android:gravity="center"
+                    android:text="800k-2tr"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_filter_money_suggest_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button"
+                    android:lines="1"
+                    android:gravity="center"
+                    android:text="2tr-3tr2"
+                    android:textSize="12sp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/dien_tich"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rg_filter_money" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#7CE8E8E8"
+                android:gravity="center"
+                android:padding="6dp"
+                android:weightSum="2.5"
+                app:layout_constraintTop_toBottomOf="@+id/textView10">
+
+                <EditText
+                    android:id="@+id/edt_filter_acreage_min"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edittext"
+                    android:gravity="center"
+                    android:hint="@string/toi_thieu"
+                    android:lines="1"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:inputType="number" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="8dp"
+                    android:layout_weight="0.2"
+                    android:background="@drawable/hr1" />
+
+                <EditText
+                    android:id="@+id/edt_filter_acreage_max"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edittext"
+                    android:gravity="center"
+                    android:hint="@string/toi_da"
+                    android:lines="1"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/rg_filter_acreage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#7CE8E8E8"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:weightSum="3.6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout10">
+
+
+                <RadioButton
+                    android:id="@+id/rb_filter_acreage_suggest_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="0 - 15"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_filter_acreage_suggest_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="15 - 30"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_filter_acreage_suggest_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="30 - 70"
+                    android:textSize="12sp" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:paddingTop="32dp"
+                android:paddingBottom="32dp"
+                android:weightSum="2.5"
+                app:layout_constraintTop_toBottomOf="@+id/rg_filter_acreage">
+
+                <Button
+                    android:id="@+id/btn_filter_confirm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="32dp"
+                    android:layout_weight="1"
+                    android:background="#ff0"
+                    android:text="@string/xac_nhan" />
+
+                <Button
+                    android:id="@+id/btn_filter_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button"
+                    android:text="Hủy" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lv_filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sv_filter_arena" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

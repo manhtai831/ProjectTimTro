@@ -1,7 +1,9 @@
 package vn.timtro.timtroproject;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +17,9 @@ import vn.timtro.timtroproject.fragment.ProfileFragment;
 
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView navView;
+    private long backPress;
+    private static final int TIME_OUT = 2000;
+
 
 
     @Override
@@ -33,8 +38,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Fragment fragment = null;
-                if (item.getItemId() == R.id.navigation_home)
+                if (item.getItemId() == R.id.navigation_home){
                     fragment = HomeFragment.newInstance();
+
+                }
+
                 else if (item.getItemId() == R.id.navigation_post)
                     fragment = AddPostFragment.newInstance();
                 else if (item.getItemId() == R.id.navigation_profile)
@@ -43,10 +51,33 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+
     }
 
     private void anhXa() {
         navView = findViewById(R.id.nav_view);
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        if(backPress + TIME_OUT > System.currentTimeMillis()){
+            super.onBackPressed();
+            finish();
+        }else{
+            Toast.makeText(getBaseContext(), "Press once again to exit!",
+                    Toast.LENGTH_SHORT).show();
+        }
+        backPress = System.currentTimeMillis();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        SharedPreferences sharedPreferences = getSharedPreferences("filter",MODE_PRIVATE);
+        sharedPreferences.edit().clear().apply();
+        sharedPreferences.edit().putString("unknown",null).apply();
     }
 
 
