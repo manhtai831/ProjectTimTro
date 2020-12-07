@@ -14,12 +14,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AvatarActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".SearchActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".EditPostActivity"
-            android:screenOrientation="portrait"/>
+        <activity android:name=".VerifyPhoneActivity"></activity>
+        <activity
+            android:name=".AvatarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EditPostActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".FilterActivity"
             android:parentActivityName=".MainActivity"

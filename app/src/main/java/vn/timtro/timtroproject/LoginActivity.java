@@ -39,12 +39,14 @@ public class LoginActivity extends AppCompatActivity {
     private CheckBox cbLoginLuuMK;
     private Button btnLoginLogin;
     private Button btnLoginSignUp;
-    private Button btnQuenMK;
     private DatabaseReference databaseReference;
     private ImageView imgLoginFB;
     private ImageView imgLoginTwitter;
     private ImageView imgLoginGoogle;
     private TextView tvVersionLogin;
+    private Button btnLoginWithMessage;
+
+
 
 
 
@@ -77,7 +79,29 @@ public class LoginActivity extends AppCompatActivity {
         btnLoginLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SignIn(edLoginUsername.getText().toString(),edLoginPass.getText().toString());
+                if(btnLoginWithMessage.getText().toString().equals("Đăng nhập bằng tin nhắn")){
+                    SignIn(edLoginUsername.getText().toString(),edLoginPass.getText().toString());
+                }else{
+                    signInWithMessage(edLoginUsername.getText().toString());
+                }
+
+
+            }
+        });
+
+        btnLoginWithMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(btnLoginWithMessage.getText().toString().equals("Đăng nhập bằng tin nhắn")){
+                    edLoginUsername.setHint("Số điện thoại");
+                    edLoginUsername.setText("0943574556");
+                    edLoginPass.setVisibility(View.INVISIBLE);
+                    btnLoginWithMessage.setText("Đăng nhập bằng tài khoản");
+                }else{
+                    edLoginUsername.setHint("Tên tài khoản");
+                    edLoginPass.setVisibility(View.VISIBLE);
+                    btnLoginWithMessage.setText("Đăng nhập bằng tin nhắn");
+                }
 
             }
         });
@@ -101,6 +125,16 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
         tvVersionLogin.setText(BuildConfig.VERSION_NAME);
+    }
+
+    private void signInWithMessage(String phoneNumber) {
+        if(phoneNumber.matches("0[0-9]{8,9}")){
+            Intent intent = new Intent(LoginActivity.this,VerifyPhoneActivity.class);
+            intent.putExtra("phoneNumber",phoneNumber);
+            startActivity(intent);
+        }else{
+            edLoginUsername.setError("Số điện thoại không tồn tại");
+        }
     }
 
     private void SignIn(final String s1, final String s2){
@@ -218,6 +252,7 @@ public class LoginActivity extends AppCompatActivity {
         imgLoginTwitter = findViewById(R.id.img_login_Twitter);
         imgLoginGoogle = findViewById(R.id.img_login_Google);
         tvVersionLogin = findViewById(R.id.tv_version_login);
+        btnLoginWithMessage = findViewById(R.id.btn_login_with_message);
     }
 
     @Override

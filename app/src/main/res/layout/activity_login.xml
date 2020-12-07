@@ -100,15 +100,40 @@
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
-
-        <CheckBox
-            android:id="@+id/cb_login_LuuMK"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:orientation="horizontal"
             android:layout_marginTop="24dp"
-            android:autoLink="none"
-            android:text="@string/login_save_password"
-            android:textSize="20sp" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/cb_login_LuuMK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:autoLink="none"
+                android:text="@string/login_save_password"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_login_with_message"
+                android:textStyle="normal"
+                android:background="@null"
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đăng nhập bằng tin nhắn"
+                android:textColor="#FFEB3B"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
     </LinearLayout>
 
     <LinearLayout
