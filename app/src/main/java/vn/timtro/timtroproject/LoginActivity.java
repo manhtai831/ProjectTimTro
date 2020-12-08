@@ -75,6 +75,7 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
             }
         });
+        btnLoginWithMessage.setVisibility(View.INVISIBLE);
 
         btnLoginLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,22 +90,22 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        btnLoginWithMessage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(btnLoginWithMessage.getText().toString().equals("Đăng nhập bằng tin nhắn")){
-                    edLoginUsername.setHint("Số điện thoại");
-                    edLoginUsername.setText("0943574556");
-                    edLoginPass.setVisibility(View.INVISIBLE);
-                    btnLoginWithMessage.setText("Đăng nhập bằng tài khoản");
-                }else{
-                    edLoginUsername.setHint("Tên tài khoản");
-                    edLoginPass.setVisibility(View.VISIBLE);
-                    btnLoginWithMessage.setText("Đăng nhập bằng tin nhắn");
-                }
-
-            }
-        });
+//        btnLoginWithMessage.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if(btnLoginWithMessage.getText().toString().equals("Đăng nhập bằng tin nhắn")){
+//                    edLoginUsername.setHint("Số điện thoại");
+//                    edLoginUsername.setText("0943574556");
+//                    edLoginPass.setVisibility(View.INVISIBLE);
+//                    btnLoginWithMessage.setText("Đăng nhập bằng tài khoản");
+//                }else{
+//                    edLoginUsername.setHint("Tên tài khoản");
+//                    edLoginPass.setVisibility(View.VISIBLE);
+//                    btnLoginWithMessage.setText("Đăng nhập bằng tin nhắn");
+//                }
+//
+//            }
+//        });
 
         imgLoginFB.setOnClickListener(new View.OnClickListener() {
             @Override
