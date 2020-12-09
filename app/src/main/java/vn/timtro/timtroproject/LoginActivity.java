@@ -169,6 +169,7 @@ public class LoginActivity extends AppCompatActivity {
                                     }
                                     editor.apply();
                                     getSharedPreferences("userLog",0).edit().putString("userName",s1.trim()).apply();
+                                    getSharedPreferences("userLog",0).edit().putString("password",s2.trim()).apply();
                                     getSharedPreferences("userLog",0).edit().putString("keyUser",user.getKey()).apply();
                                     startActivity(new Intent(LoginActivity.this,MainActivity.class));
                                     userName = s1;
