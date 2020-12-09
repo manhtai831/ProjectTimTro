@@ -188,7 +188,7 @@ public class AddPostFragment extends Fragment {
         if (validate()) {
             final Date date = Calendar.getInstance().getTime();
             final String key = databaseReference.child("post").push().getKey();
-            String idUser = databaseReference.child("user").child(LoginActivity.userName).getKey();
+            String idUser = databaseReference.child("user").child(getActivity().getSharedPreferences("userLog",0).getString("userName","")).getKey();
             final Post post = new Post(key, idUser, edtAddPostTitle.getText().toString(), edtAddPostPrice.getText().toString(),
                     edtAddPostAddress.getText().toString(), edtAddPostPhoneNumber.getText().toString(),
                     edtAddPostAcreage.getText().toString(), spnAddPostBrand.getSelectedItem().toString(), edtAddPostDecription.getText().toString(), date.toString());
