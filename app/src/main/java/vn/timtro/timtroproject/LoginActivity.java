@@ -16,6 +16,7 @@ import android.view.View;
 
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -45,6 +46,9 @@ public class LoginActivity extends AppCompatActivity {
     private ImageView imgLoginGoogle;
     private TextView tvVersionLogin;
     private Button btnLoginWithMessage;
+    private ImageButton ibReport;
+
+
 
 
 
@@ -106,6 +110,13 @@ public class LoginActivity extends AppCompatActivity {
 //
 //            }
 //        });
+
+        ibReport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
         imgLoginFB.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -255,6 +266,7 @@ public class LoginActivity extends AppCompatActivity {
         imgLoginGoogle = findViewById(R.id.img_login_Google);
         tvVersionLogin = findViewById(R.id.tv_version_login);
         btnLoginWithMessage = findViewById(R.id.btn_login_with_message);
+        ibReport = findViewById(R.id.ib_report);
     }
 
     @Override
