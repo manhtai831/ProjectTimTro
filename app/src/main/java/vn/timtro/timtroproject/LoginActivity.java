@@ -153,10 +153,7 @@ public class LoginActivity extends AppCompatActivity {
         final ProgressDialog progress = new ProgressDialog(LoginActivity.this);
         progress.setMessage("Xin chờ ...");
         progress.show();
-
-            databaseReference
-                    .child("user")
-                    .addChildEventListener(new ChildEventListener() {
+            databaseReference.child("user").addChildEventListener(new ChildEventListener() {
                 @Override
                 public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                     if(s1.trim().equals(snapshot.getKey())){
@@ -165,7 +162,6 @@ public class LoginActivity extends AppCompatActivity {
                             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                                 getSharedPreferences("userLog",0).edit().putString("idLog",snapshot.getKey()).apply();
                                 User user = snapshot.getValue(User.class);
-
                                 if(s2.trim().equals(user.getPassword())){
                                     SharedPreferences sharedPreferences = getSharedPreferences("user",MODE_PRIVATE);
                                     Editor editor = sharedPreferences.edit();
@@ -190,24 +186,19 @@ public class LoginActivity extends AppCompatActivity {
                                     Toast.makeText(LoginActivity.this, "Sai tài khoản hoặc mật khẩu", Toast.LENGTH_SHORT).show();
                                     progress.dismiss();
                                 }
-
                             }
-
                             @Override
                             public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
 
                             }
-
                             @Override
                             public void onChildRemoved(@NonNull DataSnapshot snapshot) {
 
                             }
-
                             @Override
                             public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
 
                             }
-
                             @Override
                             public void onCancelled(@NonNull DatabaseError error) {
 
@@ -216,35 +207,24 @@ public class LoginActivity extends AppCompatActivity {
                     } else{
                         progress.dismiss();
                     }
-
-
                 }
-
                 @Override
                 public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
 
                 }
-
                 @Override
                 public void onChildRemoved(@NonNull DataSnapshot snapshot) {
 
                 }
-
                 @Override
                 public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
 
                 }
-
                 @Override
                 public void onCancelled(@NonNull DatabaseError error) {
                     progress.setMessage("Time out");
                 }
             });
-
-
-
-
-
     }
 
     private void showNotification(){

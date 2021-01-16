@@ -105,6 +105,9 @@ public class ChangePasswordActivity extends AppCompatActivity {
                                         Toast.makeText(ChangePasswordActivity.this, "Sai định dạng mật khẩu hoặc không khớp", Toast.LENGTH_SHORT).show();
                                 } else if (edtUpdatePasswordOld.getText().toString().length() == 0) {
                                     Toast.makeText(ChangePasswordActivity.this, "Chưa nhập mật khẩu cũ", Toast.LENGTH_SHORT).show();
+                                }else{
+                                    Toast.makeText(ChangePasswordActivity.this, "Sai mật khẩu", Toast.LENGTH_SHORT).show();
+
                                 }
                             }
 

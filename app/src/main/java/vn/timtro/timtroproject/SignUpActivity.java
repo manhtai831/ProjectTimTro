@@ -122,7 +122,6 @@ public class SignUpActivity extends AppCompatActivity {
 
     private void SignUp(final String s1) {
         if (validate()) {
-
             String keyUser = databaseReference.child(NODE_USER).child(s1).push().getKey();
             User u = new User(keyUser,
                     edSignUpNhapUserName.getText().toString(),

@@ -40,9 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 Fragment fragment = null;
                 if (item.getItemId() == R.id.navigation_home){
                     fragment = HomeFragment.newInstance();
-
                 }
-
                 else if (item.getItemId() == R.id.navigation_post)
                     fragment = AddPostFragment.newInstance();
                 else if (item.getItemId() == R.id.navigation_profile)
@@ -51,8 +49,6 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-
-
     }
 
     private void anhXa() {

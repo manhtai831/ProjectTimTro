@@ -385,6 +385,7 @@ public class HomeFragment extends Fragment {
     }
 
     private void checkPriceAndAcreage(Post post) {
+
         final SharedPreferences sharedPreferences = getContext().getSharedPreferences("filter", Context.MODE_PRIVATE);
         Log.d(TAG, "checkPriceAndAcreage: " + sharedPreferences.getString("place", "124123"));
         Log.d(TAG, "checkPriceAndAcreage: dia chi post" + post.getDiaChi());
@@ -394,8 +395,8 @@ public class HomeFragment extends Fragment {
             if (!(sharedPreferences.getString("moneyMin", "").trim().equals("") ||
                     sharedPreferences.getString("moneyMax", "").trim().equals(""))) {
                 postAllAdapter.notifyDataSetChanged();
-                if (Integer.parseInt(post.getGia()) >= Integer.parseInt(sharedPreferences.getString("moneyMin", "-1")) &&
-                        Integer.parseInt(post.getGia()) <= Integer.parseInt(sharedPreferences.getString("moneyMax", "-1"))) {
+                if (Long.parseLong(post.getGia()) >= Long.parseLong(sharedPreferences.getString("moneyMin", "-1")) &&
+                        Long.parseLong(post.getGia()) <= Long.parseLong(sharedPreferences.getString("moneyMax", "-1"))) {
                     if (!(sharedPreferences.getString("acreageMin", "-1").trim().equals("") ||
                             sharedPreferences.getString("acreageMax", "-1").trim().equals(""))) {
                         postAllAdapter.notifyDataSetChanged();
@@ -429,8 +430,8 @@ public class HomeFragment extends Fragment {
             if (!(sharedPreferences.getString("moneyMin", "").trim().equals("") ||
                     sharedPreferences.getString("moneyMax", "").trim().equals(""))) {
                 postAllAdapter.notifyDataSetChanged();
-                if (Integer.parseInt(post.getGia()) >= Integer.parseInt(sharedPreferences.getString("moneyMin", "-1")) &&
-                        Integer.parseInt(post.getGia()) <= Integer.parseInt(sharedPreferences.getString("moneyMax", "-1"))) {
+                if (Long.parseLong(post.getGia()) >= Long.parseLong(sharedPreferences.getString("moneyMin", "-1")) &&
+                        Long.parseLong(post.getGia()) <= Long.parseLong(sharedPreferences.getString("moneyMax", "-1"))) {
                     if (!(sharedPreferences.getString("acreageMin", "-1").trim().equals("") ||
                             sharedPreferences.getString("acreageMax", "-1").trim().equals(""))) {
                         postAllAdapter.notifyDataSetChanged();

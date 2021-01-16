@@ -265,7 +265,6 @@ public class PostDetailActivity extends AppCompatActivity {
                             ivPostDetailMessage.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                    //  startActivity(new Intent(Intent.ACTION_VIEW,Uri.fromParts("sms","0943574556",null)));
                                     Uri uri = Uri.parse("smsto:" + post.getSoDienThoai());
                                     Intent it = new Intent(Intent.ACTION_SENDTO, uri);
                                     it.putExtra("sms_body", post.getTieuDe() + " diện tích " + post.getDienTich());
@@ -273,8 +272,6 @@ public class PostDetailActivity extends AppCompatActivity {
                                 }
                             });
                         }
-
-
                     }
 
                     @Override

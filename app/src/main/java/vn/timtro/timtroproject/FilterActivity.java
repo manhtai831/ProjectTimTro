@@ -18,6 +18,7 @@ import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -214,9 +215,9 @@ public class FilterActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if(charSequence.toString().equals("")){
+                if (charSequence.toString().equals("")) {
                     lvFilter.setVisibility(View.INVISIBLE);
-                }else{
+                } else {
                     lvFilter.setVisibility(View.VISIBLE);
                     provinceAdapter.filter(charSequence.toString());
                 }
@@ -246,10 +247,28 @@ public class FilterActivity extends AppCompatActivity {
         rbFilterNew.setChecked(true);
         rbFilterNew.setChecked(sharedPreferences.getBoolean("sortNewChecked", true));
         rbFilterPrice.setChecked(sharedPreferences.getBoolean("sortPriceChecked", false));
-        edtFilterAcreageMin.setText(sharedPreferences.getString("acreageMin", null));
-        edtFilterAcreageMax.setText(sharedPreferences.getString("acreageMax", null));
-        edtFilterMoneyMin.setText(sharedPreferences.getString("moneyMin", null));
-        edtFilterMoneyMax.setText(sharedPreferences.getString("moneyMax", null));
+        if (sharedPreferences.getString("acreageMin", "").equals("0")) {
+            edtFilterAcreageMin.setText("");
+        } else {
+            edtFilterAcreageMin.setText(sharedPreferences.getString("acreageMin", null));
+
+        }
+        if (sharedPreferences.getString("acreageMax", "").equals("99999")) {
+            edtFilterAcreageMax.setText("");
+        } else {
+            edtFilterAcreageMax.setText(sharedPreferences.getString("acreageMax", null));
+
+        }
+        if (sharedPreferences.getString("moneyMin", "").equals("0")) {
+            edtFilterMoneyMin.setText("");
+        } else {
+            edtFilterMoneyMin.setText(sharedPreferences.getString("moneyMin", null));
+        }
+        if (sharedPreferences.getString("moneyMax", "").equals("999999999999")) {
+            edtFilterMoneyMax.setText("");
+        } else {
+            edtFilterMoneyMax.setText(sharedPreferences.getString("moneyMax", null));
+        }
 
 
     }
@@ -261,7 +280,6 @@ public class FilterActivity extends AppCompatActivity {
         if (cbFilterAppartmantMini.isChecked()) {
             editor.putString("brandMini", cbFilterAppartmantMini.getText().toString().trim());
             editor.putBoolean("brandMiniChecked", true);
-            intent.putExtra("brandMini", cbFilterAppartmantMini.getText().toString().trim());
         } else {
             editor.putString("brandMini", "");
             editor.putBoolean("brandMiniChecked", false);
@@ -269,7 +287,6 @@ public class FilterActivity extends AppCompatActivity {
         if (cbFilterAppartment.isChecked()) {
             editor.putString("brandAppartment", cbFilterAppartment.getText().toString().trim());
             editor.putBoolean("brandAppartmentChecked", true);
-            intent.putExtra("brandAppartment", cbFilterAppartment.getText().toString().trim());
         } else {
             editor.putString("brandAppartment", "");
             editor.putBoolean("brandAppartmentChecked", false);
@@ -277,7 +294,6 @@ public class FilterActivity extends AppCompatActivity {
         if (cbFilterGeneral.isChecked()) {
             editor.putString("brandGeneral", cbFilterGeneral.getText().toString().trim());
             editor.putBoolean("brandGeneralChecked", true);
-            intent.putExtra("brandGeneral", cbFilterGeneral.getText().toString().trim());
         } else {
             editor.putString("brandGeneral", "");
             editor.putBoolean("brandGeneralChecked", false);
@@ -285,7 +301,6 @@ public class FilterActivity extends AppCompatActivity {
         if (cbFilterHomEmstay.isChecked()) {
             editor.putString("brandHomestay", cbFilterHomEmstay.getText().toString().trim());
             editor.putBoolean("brandHomestayChecked", true);
-            intent.putExtra("brandHomestay", cbFilterHomEmstay.getText().toString().trim());
         } else {
             editor.putString("brandHomestay", "");
             editor.putBoolean("brandHomestayChecked", false);
@@ -293,47 +308,69 @@ public class FilterActivity extends AppCompatActivity {
         if (cbFilterSelfManager.isChecked()) {
             editor.putString("brandSelf", cbFilterSelfManager.getText().toString().trim());
             editor.putBoolean("brandSelfChecked", true);
-            intent.putExtra("brandSelf", cbFilterSelfManager.getText().toString().trim());
         } else {
             editor.putString("brandSelf", "");
             editor.putBoolean("brandSelfChecked", false);
         }
         editor.putString("place", svFilterArena.getText().toString().trim());
-        intent.putExtra("place", svFilterArena.getText().toString().trim());
-
         if (rbFilterNew.isChecked()) {
             editor.putString("sort", rbFilterNew.getText().toString().trim());
             editor.putBoolean("sortNewChecked", true);
-            intent.putExtra("sort", rbFilterNew.getText().toString().trim());
         } else {
             editor.putBoolean("sortNewChecked", false);
         }
         if (rbFilterPrice.isChecked()) {
             editor.putString("sort", rbFilterPrice.getText().toString().trim());
             editor.putBoolean("sortPriceChecked", true);
-            intent.putExtra("sort", rbFilterPrice.getText().toString().trim());
         } else {
             editor.putBoolean("sortPriceChecked", false);
         }
-        editor.putString("moneyMin", edtFilterMoneyMin.getText().toString().trim());
-        editor.putString("moneyMax", edtFilterMoneyMax.getText().toString().trim());
-        editor.putString("acreageMin", edtFilterAcreageMin.getText().toString().trim());
-        editor.putString("acreageMax", edtFilterAcreageMax.getText().toString().trim());
 
 
+        if (edtFilterMoneyMin.getText().toString().trim().length() == 0) {
+            editor.putString("moneyMin", "0");
 
-        intent.putExtra("moneyMin", edtFilterMoneyMin.getText().toString());
-        intent.putExtra("moneyMax", edtFilterMoneyMax.getText().toString());
-        intent.putExtra("acreageMin", edtFilterAcreageMin.getText().toString());
-        intent.putExtra("acreageMax", edtFilterAcreageMax.getText().toString());
+        } else if (edtFilterMoneyMin.getText().toString().trim().length() > 12) {
+            Toast.makeText(this, "Số tiền quá lớn", Toast.LENGTH_SHORT).show();
+            return;
+        } else {
+            editor.putString("moneyMin", edtFilterMoneyMin.getText().toString().trim());
+
+        }
+
+        if (edtFilterMoneyMax.getText().toString().trim().length() == 0) {
+            editor.putString("moneyMax", "999999999999");
+
+        } else if (edtFilterMoneyMax.getText().toString().trim().length() > 12) {
+            Toast.makeText(this, "Số tiền quá lớn", Toast.LENGTH_SHORT).show();
+            return;
+        } else {
+            editor.putString("moneyMax", edtFilterMoneyMax.getText().toString().trim());
+
+        }
+        if (edtFilterAcreageMin.getText().toString().trim().length() == 0) {
+            editor.putString("acreageMin", "0");
+
+        } else if (edtFilterAcreageMin.getText().toString().trim().length() > 5) {
+            Toast.makeText(this, "Diện tích quá lớn", Toast.LENGTH_SHORT).show();
+            return;
+        } else {
+            editor.putString("acreageMin", edtFilterAcreageMin.getText().toString().trim());
+
+        }
+        if (edtFilterAcreageMax.getText().toString().trim().length() == 0) {
+            editor.putString("acreageMax", "99999");
+
+        } else if (edtFilterAcreageMax.getText().toString().trim().length() > 5) {
+            Toast.makeText(this, "Diện tích quá lớn", Toast.LENGTH_SHORT).show();
+            return;
+        } else {
+            editor.putString("acreageMax", edtFilterAcreageMax.getText().toString().trim());
+        }
         setResult(123, intent);
         editor.putString("unknown", "not null");
         editor.apply();
-
-
         finish();
-
-
     }
 
     private void anhXa() {
